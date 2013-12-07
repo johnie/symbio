@@ -1,0 +1,28 @@
+{
+  "name": "symbio",
+  "version": "0.0.1",
+  "homepage": "https://github.com/johnie/symbio",
+  "authors": [
+    "Johnie Hjelm <johnie.hjelm@symbio.com>"
+  ],
+  "description": "Landing page for Symbio to Swedish Startup Space",
+  "main": "/views/home.jade",
+  "keywords": [
+    "nodejs",
+    "express",
+    "gruntjs",
+    "bower",
+    "requirejs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+	"selectivizr": "latest"
+  }
+}

@@ -2,5 +2,9 @@
 html
     head
         title= title
+        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <script type="text/javascript">google.load("jquery", "1");</script>
+        script(src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.9/require.min.js" data-main="main.js")
+        script(src="/js/modernizr/modernizr.js")
     body
         block content
