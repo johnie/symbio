@@ -1,10 +1,11 @@
 require.config({
     paths: {
-        "modernizr": "/js/modernizr/modernizr.js",
+		// [fix] - The paths doesn't somehow load correctly?
+        "modernizr": "modernizr/modernizr.js",
         "selectivizr": "selectivizr/selectivizr.js"
     }
 });
 
 require(["modernizr", "selectivizr"], function(Modernizr, win){
-    console.log("Hello");
+    console.log("Require.js is loaded");
 });
