@@ -1,8 +1,7 @@
 require.config({
     paths: {
-		// [fix] - The paths doesn't somehow load correctly?
-        "modernizr": "modernizr/modernizr.js",
-        "selectivizr": "selectivizr/selectivizr.js"
+        "modernizr": "/js/modernizr/modernizr",
+        "selectivizr": "/js/selectivizr/selectivizr"
     }
 });
 
