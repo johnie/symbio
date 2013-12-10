@@ -2,3 +2,14 @@ extends layout
 
 block content
     include header
+    main.main
+        nav.navigation
+            div.container
+                div.grid
+                    div.grid__item.one-fifth
+                        img(src="/images/logo.svg", alt="Symbio", class="small-logo")
+                    div.grid__item.four-fifths
+                        ul.main-menu.nav.float--right
+                            include nav
+
+        include about    

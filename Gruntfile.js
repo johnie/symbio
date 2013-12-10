@@ -45,7 +45,6 @@ module.exports = function(grunt) {
         },
 
         // uglify to concat, minify, and make source maps
-
         uglify: {
             dist: {
                 options: {
@@ -78,6 +77,7 @@ module.exports = function(grunt) {
             }
         },
 
+        // Running nodemon with grunt
         nodemon: {
           dev: {
             options: {
@@ -95,6 +95,7 @@ module.exports = function(grunt) {
           }
         },
 
+        // Only watch for specific changed file and not all
         concurrent: {
           dev: {
             tasks: ['nodemon', 'watch'],
@@ -102,8 +103,7 @@ module.exports = function(grunt) {
               logConcurrentOutput: true
             },
             watch: [
-                'watch:scripts',
-                'watch:styles',
+                'watch:compass',
                 'watch:livereload',
             ],
           }
