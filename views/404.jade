@@ -1,4 +1,10 @@
 extends layout
 
 block content
-    h1 404 page not found
+    section(class="error-section sections")
+        div.error-wrap
+            h1.error-title.
+                404
+            h2.error-subtitle.
+                You just broke the internet
+            a(href="/" class="btn btn--mini btn--white btn--soft error-link") Have you tried turning it off and on again?

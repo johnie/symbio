@@ -2588,6 +2588,51 @@ html.flexbox {
   color: #fe8500;
 }
 
+/* line 1, sass/sections/_fourohfour.scss */
+.error-section {
+  width: 100%;
+  background: #21262c url("images/error.gif") top center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+  z-index: 1000 !important;
+}
+
+/* line 9, sass/sections/_fourohfour.scss */
+.error-wrap {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #FFF;
+}
+
+/* line 19, sass/sections/_fourohfour.scss */
+.error-title {
+  font-size: 5em;
+}
+
+/* line 23, sass/sections/_fourohfour.scss */
+.error-subtitle {
+  font-family: "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+/* line 29, sass/sections/_fourohfour.scss */
+.error-link {
+  position: relative;
+}
+
 /*------------------------------------*\
     $BASE
 \*------------------------------------*/

@@ -1,0 +1,31 @@
+.error-section{
+    width: 100%;
+    background:$brand-black url('images/error.gif') top center no-repeat;
+    @include vendor(background-size, cover);
+    position: relative;
+    z-index: 1000 !important;
+}
+
+.error-wrap{
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include vendor(transform, translate(-50%, -50%));    
+    text-align: center;
+    color: #FFF;
+}
+
+.error-title{
+    font-size: 5em;
+}
+
+.error-subtitle{
+    font-family: $second-fontstack;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.error-link{
+    position: relative;
+}

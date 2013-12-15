@@ -26,7 +26,7 @@ app.get("/", function(req, res) {
 });
 
 app.use(function(req, res, next){
-    res.status(404).render('404', {title: "Sorry, page not found"});
+    res.status(404).render('404', {title: "Symbio - Page not found"});
 });
 
 http.createServer(app).listen(app.get('port'), function(){
