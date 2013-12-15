@@ -3,6 +3,12 @@
     -webkit-background-size: cover;
     background-size: cover;
     background-attachment: fixed;
+    position: relative;
+    z-index: 1 !important;
+
+    &.js-bg-scroll{
+        background-attachment: scroll!important;
+    }
 }
 
 .header{
@@ -53,7 +59,7 @@
 
         &:hover::before,
         &:focus::before,
-        &.current::before {
+        &.js-current::before {
             color: $brand-color;
             text-shadow: 10px 0 $brand-color, -10px 0 $brand-color;
         }
@@ -61,7 +67,7 @@
 }
 
 .site-caption{
-    width: 900px;
+    width: 800px;
     color: #FFF;
     -webkit-font-smoothing: antialiased;
     text-align: center;
@@ -70,6 +76,10 @@
     top: 50%;
     left: 50%;
     @include vendor(transform, translate(-50%,-40%));
+
+        @media (max-width: $tablet-size) {
+            width: 600px;
+        }
 }
 
 .site-caption--slogan{
@@ -83,6 +93,10 @@
         display: block;
         color: $brand-color;
     }
+
+        @media (max-width: $tablet-size) {
+            font-size: 3em;
+        }
 }
 
 .site-caption--disclaimer{
@@ -90,10 +104,14 @@
     text-transform: none;
     letter-spacing: 0;
     line-height: 1.4;
-    padding: 0 70px;
     font-weight: 300;
     margin-bottom: 30px;
     color: #FFF;
+
+        @media (max-width: $tablet-size) {
+            font-size: 20px;
+            font-weight: 400;
+        }
 }
 
 .trace{

@@ -17,6 +17,10 @@
         padding-bottom: 15px;
         border-bottom: 1px solid $brand-color;
     }
+
+        @media (max-width: $phone-size) {
+            font-size: 24px;
+        }
 }
 
 .section-subtitle{
@@ -28,15 +32,21 @@
     @extend .cf;
 }
 
-.grid{
+.section-col__title{
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: $brand-black;
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
 
-    h4{
-        font-size: 15px;
-        letter-spacing: 1px;
-        color: $brand-black;
-        text-transform: uppercase;
-        font-weight: normal;
-        line-height: 1.3;
-        margin-bottom: 10px;
-    }
+.form__title{
+    font-size: 24px;
+    color: $brand-black;
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.3;
+    margin-bottom: 20px;
 }

@@ -1,5 +1,21 @@
 footer.footer
-    
+    div.container.inner
+        div.flexbox.three-quarters.flush--center
+            div.flexbox__item.one-third
+                img(src="/images/logo.svg", alt="Symbio", class="logo")
+            div.flexbox__item.two-thirds
+                p.
+                    Symbio Sweden AB are a consultant agency based in Stockholm Sweden. They have worked on projects of varying size, with small to multi-national corporations.
 
+                nav.social-links
+                    a(href="http://twitter.com/symbiosweden") Twitter
+                    a(href="http://facebook.com/symbiosweden") Facebook
+                    a(href="http://www.linkedin.com/company/3020005?trk=tyah&trkInfo=tas%3Asymbio%20swe%2Cidx%3A1-1-1") Linkedin
+
+                small.copyright
+                    | &copy; Symbio Sweden AB 
+                    span.copyright-year 2013
+
+//- Remove in production
 script(src="http://localhost:35729/livereload.js")
 script(src="/js/master.js")

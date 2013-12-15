@@ -1,0 +1,37 @@
+.footer{
+    background:$brand-black;
+
+    p{
+        color: #FFF;
+        font-size: 14px;
+        line-height: 1.4;
+        font-family: $second-fontstack;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+.social-links{
+    display: block;
+    padding: 10px 0 5px;
+
+    a{
+        text-transform: uppercase;
+        font-weight: 300;
+        color: #FFF;
+        text-decoration: none;
+        display: inline-block;
+        position: relative;
+        margin-right: $base-spacing-unit;
+        @include vendor(transition, color .25s ease-out);
+
+        &:hover{
+            color: #ccc;
+        }
+
+        &:not(:last-child):after {
+            content: '•';
+            padding-left: $base-spacing-unit;
+            color: $brand-color;
+        }
+    }
+}

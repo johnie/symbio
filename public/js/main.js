@@ -1,12 +1,11 @@
 require.config({
     paths: {
         "modernizr": "/js/modernizr/modernizr",
-        "selectivizr": "/js/selectivizr/selectivizr",
-        "onepage-scroll": "/js/onepage-scroll/jquery.onepage-scroll.min",
+        "gmaps": "/js/gmaps/gmaps",
         "nav": "/js/nav"
     }
 });
 
-require(["modernizr", "selectivizr", "onepage-scroll", "nav"], function(Modernizr, win, onepagescroll){
+require(["modernizr", "gmaps", "nav"], function(Modernizr){
     console.log("Require.js is loaded");
 });

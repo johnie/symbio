@@ -1,0 +1,33 @@
+.input__text, .input__textarea{
+    text-align: left;
+    letter-spacing: 1px;
+    padding: 20px 2.5%;
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 1em;
+    line-height: 1.3em;
+    background-color: #FFF;
+    border: 1px solid #DBDBDB;
+    font-family: $second-fontstack;
+    font-weight: 300;
+    @include vendor(border-radius, 4px);
+    @include vendor(transition, border-color .25s ease);
+    color: $brand-black;
+
+    &.full{
+        width: 100%;
+    }
+
+    &.required{
+        background:transparent url('images/asterisk.png') 97.5% center no-repeat;
+    }
+
+        &:hover{
+            border-color: #777;
+        }
+
+        &:focus{
+            border-color: $brand-color;
+            outline: none;
+        }
+}

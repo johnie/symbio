@@ -2,11 +2,20 @@
 html
     head
         title= title
-        <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+        <link rel="icon" type="image/png" href="favicon.png">
+        <script type="text/javascript" src="//www.google.com/jsapi"></script>
         <script type="text/javascript">google.load("jquery", "1");</script>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
         script(async src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.9/require.min.js" data-main="/js/main")
 
+        // if lt IE 9
+            script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+            script(src="https://raw.github.com/keithclark/selectivizr/master/selectivizr.js")
+
         link(rel="stylesheet" href="/style.css")
+
+        meta(charset="UTF-8")
     body
         block content
 

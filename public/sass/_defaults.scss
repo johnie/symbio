@@ -4,7 +4,7 @@ $base-color: #3D464D!default;
 $brand-black: #21262C!default;
 
 // Font family 
-@import url('http://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,600,700');
+@import url('//fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400,300,600,700');
 
 $first-fontstack: "Montserrat", "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
 $second-fontstack: "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
@@ -15,3 +15,6 @@ $base-spacing-unit: 20px!default;
 // Global border-box
 $global-border-box: true!default;
 
+// Responsive
+$tablet-size: 800px!default;
+$phone-size: 600px!default;

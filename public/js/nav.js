@@ -16,7 +16,7 @@ menuItems.click(function(e){
         offsetTop = href === "#" ? 0 : $(href).offset().top;
     $('html, body').stop().animate({ 
         scrollTop: offsetTop
-    }, 300);
+    }, 250);
 });
 
 function highlightNav() {

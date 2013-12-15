@@ -36,6 +36,7 @@
     text-decoration: none;
     text-transform: uppercase;
     @include vendor(transition, all .25s ease);
+    -webkit-font-smoothing: antialiased;
 }
 
 
@@ -198,6 +199,7 @@
   
   &:hover{
     background: lighten($brand-black, 8%); 
+    color: #FFF;
   }
 }
 
