@@ -15,6 +15,7 @@
     top: 10%;
     position: relative;
     @extend .cf;
+    // @include animation(fadeInDown, .5s, 1s, alternate, backwards, ease-out);
 }
 
 .first-nav{
@@ -71,7 +72,7 @@
     color: #FFF;
     -webkit-font-smoothing: antialiased;
     text-align: center;
-
+    // @include animation(fadeIn, .5s, 2s, alternate, backwards, ease-out);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -79,6 +80,11 @@
 
         @media (max-width: $tablet-size) {
             width: 600px;
+        }
+
+        @media (max-width: $phone-size) {
+            width: 100%;
+            padding: 0px 10px;
         }
 }
 
@@ -97,6 +103,10 @@
         @media (max-width: $tablet-size) {
             font-size: 3em;
         }
+
+        @media (max-width: $phone-size) {
+            font-size: 2em;
+        }
 }
 
 .site-caption--disclaimer{
@@ -112,6 +122,11 @@
             font-size: 20px;
             font-weight: 400;
         }
+
+        @media (max-width: $phone-size) {
+            font-size: 18px;
+            font-weight: 400;
+        }
 }
 
 .trace{
@@ -122,6 +137,7 @@
     bottom: 0;
     left: 50%;
     @include vendor(transform, translateX(-50%));
+    // @include animation(fadeInUpBig, 1s, 3s, alternate, backwards, ease-out);
 
     &:before{
         content: '';

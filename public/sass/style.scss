@@ -1,6 +1,22 @@
+/*!
+    .developer, .designer {
+        person: Johnie Hjelm;
+        email: johnie.hjelm@symbio.com;
+        twitter: @johniehjelm;
+        github: johnie;
+    }
+*/
+
 // Defaults
 @import "compass";
 @import "defaults";
+
+// Animate.sass
+@import "animate/shared";
+@import "animate/animations/fading-entrances/fadeIn";
+@import "animate/animations/fading-entrances/fadeInDown";
+@import "animate/animations/fading-entrances/fadeInUp";
+@import "animate/animations/fading-entrances/fadeInUpBig";
 
 // Base
 @import "base/headings";

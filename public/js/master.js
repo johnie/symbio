@@ -1,7 +1,9 @@
 function sections() {
-    $(".sections").css({
-        "height" : $(window).height() + "px"
-    });
+    if (!Modernizr.touch) {
+        $(".sections").css({
+            "height" : $(window).height() + "px"
+        });
+    }
 }
 
 sections();
@@ -24,15 +26,16 @@ function autoFocus() {
 
     $(window).scroll(function() {
         if ($(window).scrollTop() >= target) {
-            section.find("input[type='text']:first").focus();
+            section.find(".js-first-focus").focus();
             $(".pin").addClass("bounce");
         } else {
-            section.find("input[type='text']:first").blur();
+            section.find(".js-first-focus").blur();
         }
     });
 }
 
-autoFocus();
+// autoFocus(); 
+// Remove?
 
 function whereWeAt() {
     var map;
@@ -46,7 +49,13 @@ function whereWeAt() {
         panControl : false,
         streetViewControl : false,
         mapTypeControl: false,
-        overviewMapControl: false
+        overviewMapControl: false,
+        draggable: false,
+        navigationControl: false,
+        mapTypeControl: false,
+        scaleControl: false,
+        scrollwheel: false,
+        disableDoubleClickZoom: true
     });
     map.drawOverlay({
         lat: 59.330211,
@@ -57,6 +66,39 @@ function whereWeAt() {
 
 whereWeAt();
 
+function startAProject() {
+
+    var projectBtn      = $("#startAProject"),
+        projectWrap     = $(".start-a-project"),
+        scrollTarget    = $(".contact-section");
+        
+    projectBtn.click(function(e) {
+
+        $(this).text(function(i, text){
+          return text === "Start a project" ? "Close" : "Start a project";
+        })
+
+        e.preventDefault();
+
+        projectWrap.find("input[type='text']").first().focus();
+    
+        $('html, body').animate({
+            scrollTop: scrollTarget.offset().top
+        }, 250);
+    
+        if (projectWrap.hasClass('active')) {
+            projectWrap.removeClass("active");
+        } else {
+            projectWrap.addClass("active");
+        }
+    
+    });
+
+}
+
+startAProject();
+
+// Various functions and features
 $(function(){
     $(".first-nav").find("li:first a").addClass("js-current");
 
@@ -70,6 +112,4 @@ $(function(){
             scrollTop: $(".main").offset().top
         }, 250);
     });
-
-    $(".copyright-year").text((new Date).getFullYear());
 });

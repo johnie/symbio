@@ -5,11 +5,55 @@ section(class="contact-section" id="contact")
                 span together
 
             div.mbh.cf
-                a(href="#" class="start-project  btn btn--small btn--full btn--black btn--plus") Start a project
+                div.start-a-project
+                    div.grid
+                        div.grid__item.one-whole
+                            h4.form__title.
+                                Your details
+                        div.grid__item.one-half.cf
+                            input(type="text" class="input__text  required  full" placeholder="Enter your name")
+                        div.grid__item.one-half.cf
+                            input(type="tel" class="input__text  required  full" placeholder="Enter a contact telephone number")
+                        div.grid__item.one-half.cf
+                            input(type="email" class="input__text  required  full" placeholder="Enter your email address")
+                        div.grid__item.one-half.cf
+                            input(type="text" class="input__text  required  full" placeholder="Enter your company")
+                        div.grid__item.one-whole.ptl
+                            h4.form__title.
+                                The project
+                        div.grid__item.one-half
+                            input(type="text" class="input__text  required  full" placeholder="Enter your company")
+                            input(type="text" class="input__text  required  full" placeholder="Enter your company")
+                        div.grid__item.one-half
+                            textarea(placeholder="Describe the project" class="input__textarea  required  full" cols="40" rows="8")
+                        div.grid__item.one-whole.ptl.cf
+                            h4.form__title.
+                                What do you need us to do?
+                        div.grid__item.one-half.cf
+                            label.form-check Brand
+                                input(type="checkbox" class="form-check__checkbox full")
+                        div.grid__item.one-half.cf
+                            label.form-check Mobile / Web developement
+                                input(type="checkbox" class="form-check__checkbox full")
+                        div.grid__item.one-half.cf
+                            label.form-check Mobile / Web design
+                                input(type="checkbox" class="form-check__checkbox full")
+                        div.grid__item.one-half.cf
+                            label.form-check Testing
+                                input(type="checkbox" class="form-check__checkbox full")
+                        div.grid__item.one-whole.cf.ptl
+                            h4.form__title.
+                                Any extra info that you think will helps us
+                        div.grid__item.one-half.cf
+                            textarea(placeholder="Anything to add?" class="input__textarea  full" cols="40" rows="8")
+                        div.grid__item.one-whole.cf.pbl
+                            a(href="#" class="start-project  btn btn--small  btn--orange") Send
+
+                a(href="#" class="start-project  btn btn--small btn--full btn--black" id="startAProject") Start a project
 
             div.contact-form
                 div.grid
-                    div.grid__item.one-half
+                    div.grid__item.one-half.cf.pbl
                         p.
                             We love to hear from new people, even if all your asking for is a little advice on how to move your business forward. If however, your looking to get a quote on your next project, head over to the <strong>Start a project</strong> section above. This will not only help us if your looking to get a quote but (and trust us when we say this) you'd be surprised at how much consideration a new digital project needs.
 
@@ -22,18 +66,7 @@ section(class="contact-section" id="contact")
                         div#map.contact-map
 
                     div.grid__item.one-half
-                        input(type="text" class="input__text  required  full" placeholder="Enter your name")
+                        input(type="text" class="input__text  required  full  js-first-focus" placeholder="Enter your name")
                         input(type="email" class="input__text  required  full" placeholder="Enter your email address")
                         textarea(placeholder="Enter you message" class="input__textarea  full" cols="40" rows="10")
                         input(type="submit" class="btn btn--small btn--full btn--orange") Send
-                    //- div.grid__item.one-whole
-                    //-     h4.form__title.
-                    //-         Your details
-                    //- div.grid__item.one-half.cf
-                    //-     input(type="text" class="input__text  required  full" placeholder="Enter your name")
-                    //- div.grid__item.one-half.cf
-                    //-     input(type="tel" class="input__text  required  full" placeholder="Enter a contact telephone number")
-                    //- div.grid__item.one-half.cf
-                    //-     input(type="email" class="input__text  required  full" placeholder="Enter your email address")
-                    //- div.grid__item.one-half.cf
-                    //-     input(type="text" class="input__text  required  full" placeholder="Enter your company")
