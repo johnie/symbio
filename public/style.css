@@ -9,312 +9,6 @@
         github: johnie;
     }
 */
-@-webkit-keyframes fadeIn {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeIn.scss */
-  0% {
-    opacity: 0;
-  }
-
-  /* line 3, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeIn.scss */
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeIn.scss */
-  0% {
-    opacity: 0;
-  }
-
-  /* line 3, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeIn.scss */
-  100% {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes fadeIn {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeIn.scss */
-  0% {
-    opacity: 0;
-  }
-
-  /* line 3, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeIn.scss */
-  100% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes fadeIn {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeIn.scss */
-  0% {
-    opacity: 0;
-  }
-
-  /* line 3, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeIn.scss */
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeIn.scss */
-  0% {
-    opacity: 0;
-  }
-
-  /* line 3, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeIn.scss */
-  100% {
-    opacity: 1;
-  }
-}
-
-/* line 23, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeIn.scss */
-.fadeIn {
-  -webkit-animation-name: fadeIn;
-  -moz-animation-name: fadeIn;
-  -ms-animation-name: fadeIn;
-  -o-animation-name: fadeIn;
-  animation-name: fadeIn;
-}
-
-@-webkit-keyframes fadeInDown {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInDown.scss */
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-20px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInDown.scss */
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
-
-@-moz-keyframes fadeInDown {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInDown.scss */
-  0% {
-    opacity: 0;
-    -moz-transform: translateY(-20px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInDown.scss */
-  100% {
-    opacity: 1;
-    -moz-transform: translateY(0);
-  }
-}
-
-@-ms-keyframes fadeInDown {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInDown.scss */
-  0% {
-    opacity: 0;
-    -ms-transform: translateY(-20px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInDown.scss */
-  100% {
-    opacity: 1;
-    -ms-transform: translateY(0);
-  }
-}
-
-@-o-keyframes fadeInDown {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInDown.scss */
-  0% {
-    opacity: 0;
-    -o-transform: translateY(-20px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInDown.scss */
-  100% {
-    opacity: 1;
-    -o-transform: translateY(0);
-  }
-}
-
-@keyframes fadeInDown {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInDown.scss */
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInDown.scss */
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* line 29, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInDown.scss */
-.fadeInDown {
-  -webkit-animation-name: fadeInDown;
-  -moz-animation-name: fadeInDown;
-  -ms-animation-name: fadeInDown;
-  -o-animation-name: fadeInDown;
-  animation-name: fadeInDown;
-}
-
-@-webkit-keyframes fadeInUp {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUp.scss */
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUp.scss */
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
-
-@-moz-keyframes fadeInUp {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUp.scss */
-  0% {
-    opacity: 0;
-    -moz-transform: translateY(20px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUp.scss */
-  100% {
-    opacity: 1;
-    -moz-transform: translateY(0);
-  }
-}
-
-@-ms-keyframes fadeInUp {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUp.scss */
-  0% {
-    opacity: 0;
-    -ms-transform: translateY(20px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUp.scss */
-  100% {
-    opacity: 1;
-    -ms-transform: translateY(0);
-  }
-}
-
-@-o-keyframes fadeInUp {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUp.scss */
-  0% {
-    opacity: 0;
-    -o-transform: translateY(20px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUp.scss */
-  100% {
-    opacity: 1;
-    -o-transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUp.scss */
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUp.scss */
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* line 29, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUp.scss */
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  -moz-animation-name: fadeInUp;
-  -ms-animation-name: fadeInUp;
-  -o-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-
-@-webkit-keyframes fadeInUpBig {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUpBig.scss */
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(2000px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUpBig.scss */
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-  }
-}
-
-@-moz-keyframes fadeInUpBig {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUpBig.scss */
-  0% {
-    opacity: 0;
-    -moz-transform: translateY(2000px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUpBig.scss */
-  100% {
-    opacity: 1;
-    -moz-transform: translateY(0);
-  }
-}
-
-@-ms-keyframes fadeInUpBig {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUpBig.scss */
-  0% {
-    opacity: 0;
-    -ms-transform: translateY(2000px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUpBig.scss */
-  100% {
-    opacity: 1;
-    -ms-transform: translateY(0);
-  }
-}
-
-@-o-keyframes fadeInUpBig {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUpBig.scss */
-  0% {
-    opacity: 0;
-    -o-transform: translateY(2000px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUpBig.scss */
-  100% {
-    opacity: 1;
-    -o-transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUpBig {
-  /* line 2, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUpBig.scss */
-  0% {
-    opacity: 0;
-    transform: translateY(2000px);
-  }
-
-  /* line 6, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUpBig.scss */
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* line 29, ../../../../../Library/Ruby/Gems/2.0.0/gems/animate-sass-0.1.1/stylesheets/animate/animations/fading-entrances/_fadeInUpBig.scss */
-.fadeInUpBig {
-  -webkit-animation-name: fadeInUpBig;
-  -moz-animation-name: fadeInUpBig;
-  -ms-animation-name: fadeInUpBig;
-  -o-animation-name: fadeInUpBig;
-  animation-name: fadeInUpBig;
-}
-
 /* line 1, sass/base/_headings.scss */
 .section-title {
   color: #21262c;
@@ -1905,7 +1599,7 @@ html.flexbox {
   position: relative;
 }
 
-/* line 21, sass/sections/_header.scss */
+/* line 20, sass/sections/_header.scss */
 .first-nav {
   height: 54px;
   text-transform: uppercase;
@@ -1913,12 +1607,12 @@ html.flexbox {
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
 }
-/* line 28, sass/sections/_header.scss */
+/* line 27, sass/sections/_header.scss */
 .first-nav li {
   padding-left: 30px;
   padding-top: 17px;
 }
-/* line 33, sass/sections/_header.scss */
+/* line 32, sass/sections/_header.scss */
 .first-nav a {
   color: #eee;
   line-height: 1;
@@ -1930,7 +1624,7 @@ html.flexbox {
   transition: color 0.25s ease-out;
   position: relative;
 }
-/* line 40, sass/sections/_header.scss */
+/* line 39, sass/sections/_header.scss */
 .first-nav a::before {
   position: absolute;
   top: 100%;
@@ -1947,17 +1641,17 @@ html.flexbox {
   transform: translateX(-50%);
   pointer-events: none;
 }
-/* line 57, sass/sections/_header.scss */
+/* line 56, sass/sections/_header.scss */
 .first-nav a:hover {
   color: #FFF;
 }
-/* line 63, sass/sections/_header.scss */
+/* line 62, sass/sections/_header.scss */
 .first-nav a:hover::before, .first-nav a:focus::before, .first-nav a.js-current::before {
   color: #fe8500;
   text-shadow: 10px 0 #fe8500, -10px 0 #fe8500;
 }
 
-/* line 70, sass/sections/_header.scss */
+/* line 69, sass/sections/_header.scss */
 .site-caption {
   width: 800px;
   color: #FFF;
@@ -1973,20 +1667,20 @@ html.flexbox {
   transform: translate(-50%, -40%);
 }
 @media (max-width: 800px) {
-  /* line 70, sass/sections/_header.scss */
+  /* line 69, sass/sections/_header.scss */
   .site-caption {
     width: 600px;
   }
 }
 @media (max-width: 600px) {
-  /* line 70, sass/sections/_header.scss */
+  /* line 69, sass/sections/_header.scss */
   .site-caption {
     width: 100%;
     padding: 0px 10px;
   }
 }
 
-/* line 91, sass/sections/_header.scss */
+/* line 89, sass/sections/_header.scss */
 .site-caption--slogan {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1994,25 +1688,25 @@ html.flexbox {
   font-size: 3.5em;
   margin-bottom: 30px;
 }
-/* line 98, sass/sections/_header.scss */
+/* line 96, sass/sections/_header.scss */
 .site-caption--slogan span {
   display: block;
   color: #fe8500;
 }
 @media (max-width: 800px) {
-  /* line 91, sass/sections/_header.scss */
+  /* line 89, sass/sections/_header.scss */
   .site-caption--slogan {
     font-size: 3em;
   }
 }
 @media (max-width: 600px) {
-  /* line 91, sass/sections/_header.scss */
+  /* line 89, sass/sections/_header.scss */
   .site-caption--slogan {
     font-size: 2em;
   }
 }
 
-/* line 112, sass/sections/_header.scss */
+/* line 110, sass/sections/_header.scss */
 .site-caption--disclaimer {
   font: 24px "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
   text-transform: none;
@@ -2023,21 +1717,21 @@ html.flexbox {
   color: #FFF;
 }
 @media (max-width: 800px) {
-  /* line 112, sass/sections/_header.scss */
+  /* line 110, sass/sections/_header.scss */
   .site-caption--disclaimer {
     font-size: 20px;
     font-weight: 400;
   }
 }
 @media (max-width: 600px) {
-  /* line 112, sass/sections/_header.scss */
+  /* line 110, sass/sections/_header.scss */
   .site-caption--disclaimer {
     font-size: 18px;
     font-weight: 400;
   }
 }
 
-/* line 132, sass/sections/_header.scss */
+/* line 130, sass/sections/_header.scss */
 .trace {
   position: absolute;
   width: 2px;
@@ -2051,7 +1745,7 @@ html.flexbox {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-/* line 142, sass/sections/_header.scss */
+/* line 139, sass/sections/_header.scss */
 .trace:before {
   content: '';
   display: block;
