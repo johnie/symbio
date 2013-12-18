@@ -11,6 +11,13 @@
  * out over other selectors.
  */
 
+/**
+ * Positioning
+ */
+.pos-absolute   { position: absolute !important; }
+.pos-relative   { position: relative !important; }
+.pos-fixed      { position: fixed    !important; }
+
 
 /**
  * Add/remove floats

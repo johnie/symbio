@@ -716,19 +716,37 @@ fieldset {
  * out over other selectors.
  */
 /**
+ * Positioning
+ */
+/* line 17, sass/generic/_helper.scss */
+.pos-absolute {
+  position: absolute !important;
+}
+
+/* line 18, sass/generic/_helper.scss */
+.pos-relative {
+  position: relative !important;
+}
+
+/* line 19, sass/generic/_helper.scss */
+.pos-fixed {
+  position: fixed    !important;
+}
+
+/**
  * Add/remove floats
  */
-/* line 18, sass/generic/_helper.scss */
+/* line 25, sass/generic/_helper.scss */
 .float--right {
   float: right !important;
 }
 
-/* line 19, sass/generic/_helper.scss */
+/* line 26, sass/generic/_helper.scss */
 .float--left {
   float: left !important;
 }
 
-/* line 20, sass/generic/_helper.scss */
+/* line 27, sass/generic/_helper.scss */
 .float--none {
   float: none !important;
 }
@@ -736,17 +754,17 @@ fieldset {
 /**
  * Text alignment
  */
-/* line 26, sass/generic/_helper.scss */
+/* line 33, sass/generic/_helper.scss */
 .text--left {
   text-align: left  !important;
 }
 
-/* line 27, sass/generic/_helper.scss */
+/* line 34, sass/generic/_helper.scss */
 .text--center {
   text-align: center !important;
 }
 
-/* line 28, sass/generic/_helper.scss */
+/* line 35, sass/generic/_helper.scss */
 .text--right {
   text-align: right !important;
 }
@@ -754,17 +772,17 @@ fieldset {
 /**
  * Font weights
  */
-/* line 34, sass/generic/_helper.scss */
+/* line 41, sass/generic/_helper.scss */
 .weight--light {
   font-weight: 300 !important;
 }
 
-/* line 35, sass/generic/_helper.scss */
+/* line 42, sass/generic/_helper.scss */
 .weight--normal {
   font-weight: 400 !important;
 }
 
-/* line 36, sass/generic/_helper.scss */
+/* line 43, sass/generic/_helper.scss */
 .weight--semibold {
   font-weight: 600 !important;
 }
@@ -772,118 +790,118 @@ fieldset {
 /**
  * Add/remove margins
  */
-/* line 42, sass/generic/_helper.scss */
+/* line 49, sass/generic/_helper.scss */
 .push {
   margin: 20px !important;
 }
 
-/* line 43, sass/generic/_helper.scss */
+/* line 50, sass/generic/_helper.scss */
 .push--top {
   margin-top: 20px !important;
 }
 
-/* line 44, sass/generic/_helper.scss */
+/* line 51, sass/generic/_helper.scss */
 .push--right {
   margin-right: 20px !important;
 }
 
-/* line 45, sass/generic/_helper.scss */
+/* line 52, sass/generic/_helper.scss */
 .push--bottom {
   margin-bottom: 20px !important;
 }
 
-/* line 46, sass/generic/_helper.scss */
+/* line 53, sass/generic/_helper.scss */
 .push--left {
   margin-left: 20px !important;
 }
 
-/* line 47, sass/generic/_helper.scss */
+/* line 54, sass/generic/_helper.scss */
 .push--ends {
   margin-top: 20px !important;
   margin-bottom: 20px !important;
 }
 
-/* line 48, sass/generic/_helper.scss */
+/* line 55, sass/generic/_helper.scss */
 .push--sides {
   margin-right: 20px !important;
   margin-left: 20px !important;
 }
 
-/* line 50, sass/generic/_helper.scss */
+/* line 57, sass/generic/_helper.scss */
 .push-half {
   margin: 20px !important;
 }
 
-/* line 51, sass/generic/_helper.scss */
+/* line 58, sass/generic/_helper.scss */
 .push-half--top {
   margin-top: 20px !important;
 }
 
-/* line 52, sass/generic/_helper.scss */
+/* line 59, sass/generic/_helper.scss */
 .push-half--right {
   margin-right: 20px !important;
 }
 
-/* line 53, sass/generic/_helper.scss */
+/* line 60, sass/generic/_helper.scss */
 .push-half--bottom {
   margin-bottom: 20px !important;
 }
 
-/* line 54, sass/generic/_helper.scss */
+/* line 61, sass/generic/_helper.scss */
 .push-half--left {
   margin-left: 20px !important;
 }
 
-/* line 55, sass/generic/_helper.scss */
+/* line 62, sass/generic/_helper.scss */
 .push-half--ends {
   margin-top: 20px !important;
   margin-bottom: 20px !important;
 }
 
-/* line 56, sass/generic/_helper.scss */
+/* line 63, sass/generic/_helper.scss */
 .push-half--sides {
   margin-right: 20px !important;
   margin-left: 20px !important;
 }
 
-/* line 58, sass/generic/_helper.scss */
+/* line 65, sass/generic/_helper.scss */
 .flush {
   margin: 0 !important;
 }
 
-/* line 59, sass/generic/_helper.scss */
+/* line 66, sass/generic/_helper.scss */
 .flush--top {
   margin-top: 0 !important;
 }
 
-/* line 60, sass/generic/_helper.scss */
+/* line 67, sass/generic/_helper.scss */
 .flush--right {
   margin-right: 0 !important;
 }
 
-/* line 61, sass/generic/_helper.scss */
+/* line 68, sass/generic/_helper.scss */
 .flush--bottom {
   margin-bottom: 0 !important;
 }
 
-/* line 62, sass/generic/_helper.scss */
+/* line 69, sass/generic/_helper.scss */
 .flush--left {
   margin-left: 0 !important;
 }
 
-/* line 63, sass/generic/_helper.scss */
+/* line 70, sass/generic/_helper.scss */
 .flush--ends {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
 }
 
-/* line 64, sass/generic/_helper.scss */
+/* line 71, sass/generic/_helper.scss */
 .flush--sides {
   margin-right: 0 !important;
   margin-left: 0 !important;
 }
 
-/* line 65, sass/generic/_helper.scss */
+/* line 72, sass/generic/_helper.scss */
 .flush--center {
   margin: 0 auto !important;
 }
@@ -891,112 +909,112 @@ fieldset {
 /**
  * Add/remove paddings
  */
-/* line 71, sass/generic/_helper.scss */
+/* line 78, sass/generic/_helper.scss */
 .soft {
   padding: 20px !important;
 }
 
-/* line 72, sass/generic/_helper.scss */
+/* line 79, sass/generic/_helper.scss */
 .soft--top {
   padding-top: 20px !important;
 }
 
-/* line 73, sass/generic/_helper.scss */
+/* line 80, sass/generic/_helper.scss */
 .soft--right {
   padding-right: 20px !important;
 }
 
-/* line 74, sass/generic/_helper.scss */
+/* line 81, sass/generic/_helper.scss */
 .soft--bottom {
   padding-bottom: 20px !important;
 }
 
-/* line 75, sass/generic/_helper.scss */
+/* line 82, sass/generic/_helper.scss */
 .soft--left {
   padding-left: 20px !important;
 }
 
-/* line 76, sass/generic/_helper.scss */
+/* line 83, sass/generic/_helper.scss */
 .soft--ends {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
 }
 
-/* line 77, sass/generic/_helper.scss */
+/* line 84, sass/generic/_helper.scss */
 .soft--sides {
   padding-right: 20px !important;
   padding-left: 20px !important;
 }
 
-/* line 79, sass/generic/_helper.scss */
+/* line 86, sass/generic/_helper.scss */
 .soft-half {
   padding: 20px !important;
 }
 
-/* line 80, sass/generic/_helper.scss */
+/* line 87, sass/generic/_helper.scss */
 .soft-half--top {
   padding-top: 20px !important;
 }
 
-/* line 81, sass/generic/_helper.scss */
+/* line 88, sass/generic/_helper.scss */
 .soft-half--right {
   padding-right: 20px !important;
 }
 
-/* line 82, sass/generic/_helper.scss */
+/* line 89, sass/generic/_helper.scss */
 .soft-half--bottom {
   padding-bottom: 20px !important;
 }
 
-/* line 83, sass/generic/_helper.scss */
+/* line 90, sass/generic/_helper.scss */
 .soft-half--left {
   padding-left: 20px !important;
 }
 
-/* line 84, sass/generic/_helper.scss */
+/* line 91, sass/generic/_helper.scss */
 .soft-half--ends {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
 }
 
-/* line 85, sass/generic/_helper.scss */
+/* line 92, sass/generic/_helper.scss */
 .soft-half--sides {
   padding-right: 20px !important;
   padding-left: 20px !important;
 }
 
-/* line 87, sass/generic/_helper.scss */
+/* line 94, sass/generic/_helper.scss */
 .hard {
   padding: 0 !important;
 }
 
-/* line 88, sass/generic/_helper.scss */
+/* line 95, sass/generic/_helper.scss */
 .hard--top {
   padding-top: 0 !important;
 }
 
-/* line 89, sass/generic/_helper.scss */
+/* line 96, sass/generic/_helper.scss */
 .hard--right {
   padding-right: 0 !important;
 }
 
-/* line 90, sass/generic/_helper.scss */
+/* line 97, sass/generic/_helper.scss */
 .hard--bottom {
   padding-bottom: 0 !important;
 }
 
-/* line 91, sass/generic/_helper.scss */
+/* line 98, sass/generic/_helper.scss */
 .hard--left {
   padding-left: 0 !important;
 }
 
-/* line 92, sass/generic/_helper.scss */
+/* line 99, sass/generic/_helper.scss */
 .hard--ends {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
 
-/* line 93, sass/generic/_helper.scss */
+/* line 100, sass/generic/_helper.scss */
 .hard--sides {
   padding-right: 0 !important;
   padding-left: 0 !important;
@@ -1005,7 +1023,7 @@ fieldset {
 /**
  * Visibility
  */
-/* line 99, sass/generic/_helper.scss */
+/* line 106, sass/generic/_helper.scss */
 .display--none {
   display: none;
 }
@@ -1013,12 +1031,12 @@ fieldset {
 /**
  * Pull items full width of `.island` parents.
  */
-/* line 104, sass/generic/_helper.scss */
+/* line 111, sass/generic/_helper.scss */
 .full-bleed {
   margin-right: -20px !important;
   margin-left: -20px !important;
 }
-/* line 108, sass/generic/_helper.scss */
+/* line 115, sass/generic/_helper.scss */
 .islet .full-bleed {
   margin-right: -20px !important;
   margin-left: -20px !important;
@@ -1028,7 +1046,7 @@ fieldset {
  * Add a help cursor to any element that gives the user extra information on
  * `:hover`.
  */
-/* line 119, sass/generic/_helper.scss */
+/* line 126, sass/generic/_helper.scss */
 .informative {
   cursor: help !important;
 }
@@ -1036,7 +1054,7 @@ fieldset {
 /**
  * Mute an object by reducing its opacity.
  */
-/* line 127, sass/generic/_helper.scss */
+/* line 134, sass/generic/_helper.scss */
 .muted {
   opacity: 0.5 !important;
   filter: alpha(opacity=50) !important;
@@ -1048,7 +1066,7 @@ fieldset {
    <p class=proceed><a href=#>Read more...</a></p>
  *
  */
-/* line 139, sass/generic/_helper.scss */
+/* line 146, sass/generic/_helper.scss */
 .proceed {
   text-align: right !important;
 }
@@ -1059,7 +1077,7 @@ fieldset {
    <a href=# class=go>Read more</a>
  *
  */
-/* line 150, sass/generic/_helper.scss */
+/* line 157, sass/generic/_helper.scss */
 .go:after {
   content: "\00A0" "\00BB" !important;
 }
@@ -1067,7 +1085,7 @@ fieldset {
 /**
  * Apply capital case to an element (usually a `strong`).
  */
-/* line 158, sass/generic/_helper.scss */
+/* line 165, sass/generic/_helper.scss */
 .caps {
   text-transform: uppercase !important;
 }
@@ -1076,7 +1094,7 @@ fieldset {
  * Hide content off-screen without resorting to `display:none;`, also provide
  * breakpoint specific hidden elements.
  */
-/* line 178, sass/generic/_helper.scss */
+/* line 185, sass/generic/_helper.scss */
 .accessibility,
 .visuallyhidden {
   border: 0 !important;
@@ -1165,15 +1183,15 @@ fieldset {
   -o-box-sizing: border-box;
   box-sizing: border-box;
 }
+
 @media (max-width: 600px) {
-  /* line 66, sass/generic/_grids.scss */
+  /* line 76, sass/generic/_grids.scss */
   .grid__item {
     float: none;
     width: 100% !important;
   }
 }
-
-/* line 81, sass/generic/_grids.scss */
+/* line 82, sass/generic/_grids.scss */
 .flexbox {
   display: table;
   width: 100%;
@@ -1182,13 +1200,13 @@ fieldset {
 /**
  * Nasty hack to circumvent Modernizr conflicts.
  */
-/* line 89, sass/generic/_grids.scss */
+/* line 90, sass/generic/_grids.scss */
 html.flexbox {
   display: block;
   width: auto;
 }
 
-/* line 94, sass/generic/_grids.scss */
+/* line 95, sass/generic/_grids.scss */
 .flexbox__item {
   display: table-cell;
   vertical-align: middle;
@@ -1769,49 +1787,86 @@ html.flexbox {
 
 /* line 1, sass/sections/_contact.scss */
 .start-a-project {
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
   -webkit-transition: all 0.5s ease-out;
   -moz-transition: all 0.5s ease-out;
   -ms-transition: all 0.5s ease-out;
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
-/* line 7, sass/sections/_contact.scss */
+/* line 4, sass/sections/_contact.scss */
 .no-js .start-a-project {
   opacity: 1 !important;
   display: block !important;
 }
-/* line 12, sass/sections/_contact.scss */
+/* line 9, sass/sections/_contact.scss */
+.start-a-project.hidden {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* line 15, sass/sections/_contact.scss */
 .start-a-project.active {
   opacity: 1;
   height: auto;
   border-bottom: 1px solid #ccc;
 }
 
-/* line 21, sass/sections/_contact.scss */
+/* line 24, sass/sections/_contact.scss */
 .contact-form p {
   margin-bottom: 20px;
 }
-/* line 24, sass/sections/_contact.scss */
+/* line 27, sass/sections/_contact.scss */
 .contact-form p strong {
   font-weight: 600;
 }
 
-/* line 30, sass/sections/_contact.scss */
+/* line 33, sass/sections/_contact.scss */
 .contact-map {
   width: 100%;
-  height: 250px;
+  height: 300px;
 }
 
-/* line 35, sass/sections/_contact.scss */
+/* line 38, sass/sections/_contact.scss */
 .pin-wrap {
   position: relative;
   top: -5px;
 }
 
-/* line 40, sass/sections/_contact.scss */
+/* line 43, sass/sections/_contact.scss */
+.bubble {
+  position: absolute;
+  background-color: #21262c;
+  color: #FFF;
+  width: 150px;
+  text-align: center;
+  top: -60px;
+  left: 50%;
+  margin-left: -80px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  line-height: 30px;
+}
+/* line 55, sass/sections/_contact.scss */
+.bubble:after {
+  width: 0;
+  height: 0;
+  content: '';
+  border: 6px solid transparent;
+  border-top-color: #21262c;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/* line 68, sass/sections/_contact.scss */
 .pin {
   width: 30px;
   height: 30px;
@@ -1828,7 +1883,7 @@ html.flexbox {
   margin: -20px 0 0 -20px;
 }
 
-/* line 51, sass/sections/_contact.scss */
+/* line 79, sass/sections/_contact.scss */
 .pin:after {
   content: "";
   width: 14px;
@@ -1839,7 +1894,7 @@ html.flexbox {
   border-radius: 50%;
 }
 
-/* line 61, sass/sections/_contact.scss */
+/* line 89, sass/sections/_contact.scss */
 .bounce {
   -webkit-animation-name: bounce;
   -moz-animation-name: bounce;
@@ -1858,7 +1913,7 @@ html.flexbox {
   animation-duration: 1s;
 }
 
-/* line 67, sass/sections/_contact.scss */
+/* line 95, sass/sections/_contact.scss */
 .pulse {
   background: #d6d4d4;
   border-radius: 50%;
@@ -1876,7 +1931,7 @@ html.flexbox {
   z-index: -2;
 }
 
-/* line 79, sass/sections/_contact.scss */
+/* line 107, sass/sections/_contact.scss */
 .pulse:after {
   content: "";
   border-radius: 50%;
@@ -1904,7 +1959,7 @@ html.flexbox {
 }
 
 @-webkit-keyframes pulsate {
-  /* line 94, sass/sections/_contact.scss */
+  /* line 122, sass/sections/_contact.scss */
   0% {
     -webkit-transform: scale(0.1, 0.1);
     -moz-transform: scale(0.1, 0.1);
@@ -1914,12 +1969,12 @@ html.flexbox {
     opacity: 0;
   }
 
-  /* line 99, sass/sections/_contact.scss */
+  /* line 127, sass/sections/_contact.scss */
   50% {
     opacity: 1;
   }
 
-  /* line 103, sass/sections/_contact.scss */
+  /* line 131, sass/sections/_contact.scss */
   100% {
     -webkit-transform: scale(1.2, 1.2);
     -moz-transform: scale(1.2, 1.2);
@@ -1931,7 +1986,7 @@ html.flexbox {
 }
 
 @-moz-keyframes pulsate {
-  /* line 94, sass/sections/_contact.scss */
+  /* line 122, sass/sections/_contact.scss */
   0% {
     -webkit-transform: scale(0.1, 0.1);
     -moz-transform: scale(0.1, 0.1);
@@ -1941,12 +1996,12 @@ html.flexbox {
     opacity: 0;
   }
 
-  /* line 99, sass/sections/_contact.scss */
+  /* line 127, sass/sections/_contact.scss */
   50% {
     opacity: 1;
   }
 
-  /* line 103, sass/sections/_contact.scss */
+  /* line 131, sass/sections/_contact.scss */
   100% {
     -webkit-transform: scale(1.2, 1.2);
     -moz-transform: scale(1.2, 1.2);
@@ -1958,7 +2013,7 @@ html.flexbox {
 }
 
 @-ms-keyframes pulsate {
-  /* line 94, sass/sections/_contact.scss */
+  /* line 122, sass/sections/_contact.scss */
   0% {
     -webkit-transform: scale(0.1, 0.1);
     -moz-transform: scale(0.1, 0.1);
@@ -1968,12 +2023,12 @@ html.flexbox {
     opacity: 0;
   }
 
-  /* line 99, sass/sections/_contact.scss */
+  /* line 127, sass/sections/_contact.scss */
   50% {
     opacity: 1;
   }
 
-  /* line 103, sass/sections/_contact.scss */
+  /* line 131, sass/sections/_contact.scss */
   100% {
     -webkit-transform: scale(1.2, 1.2);
     -moz-transform: scale(1.2, 1.2);
@@ -1985,7 +2040,7 @@ html.flexbox {
 }
 
 @-o-keyframes pulsate {
-  /* line 94, sass/sections/_contact.scss */
+  /* line 122, sass/sections/_contact.scss */
   0% {
     -webkit-transform: scale(0.1, 0.1);
     -moz-transform: scale(0.1, 0.1);
@@ -1995,12 +2050,12 @@ html.flexbox {
     opacity: 0;
   }
 
-  /* line 99, sass/sections/_contact.scss */
+  /* line 127, sass/sections/_contact.scss */
   50% {
     opacity: 1;
   }
 
-  /* line 103, sass/sections/_contact.scss */
+  /* line 131, sass/sections/_contact.scss */
   100% {
     -webkit-transform: scale(1.2, 1.2);
     -moz-transform: scale(1.2, 1.2);
@@ -2012,7 +2067,7 @@ html.flexbox {
 }
 
 @keyframes pulsate {
-  /* line 94, sass/sections/_contact.scss */
+  /* line 122, sass/sections/_contact.scss */
   0% {
     -webkit-transform: scale(0.1, 0.1);
     -moz-transform: scale(0.1, 0.1);
@@ -2022,12 +2077,12 @@ html.flexbox {
     opacity: 0;
   }
 
-  /* line 99, sass/sections/_contact.scss */
+  /* line 127, sass/sections/_contact.scss */
   50% {
     opacity: 1;
   }
 
-  /* line 103, sass/sections/_contact.scss */
+  /* line 131, sass/sections/_contact.scss */
   100% {
     -webkit-transform: scale(1.2, 1.2);
     -moz-transform: scale(1.2, 1.2);
@@ -2039,7 +2094,7 @@ html.flexbox {
 }
 
 @-webkit-keyframes bounce {
-  /* line 110, sass/sections/_contact.scss */
+  /* line 138, sass/sections/_contact.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateY(-2000px) rotate(-45deg);
@@ -2049,7 +2104,7 @@ html.flexbox {
     transform: translateY(-2000px) rotate(-45deg);
   }
 
-  /* line 115, sass/sections/_contact.scss */
+  /* line 143, sass/sections/_contact.scss */
   60% {
     opacity: 1;
     -webkit-transform: translateY(30px) rotate(-45deg);
@@ -2059,7 +2114,7 @@ html.flexbox {
     transform: translateY(30px) rotate(-45deg);
   }
 
-  /* line 120, sass/sections/_contact.scss */
+  /* line 148, sass/sections/_contact.scss */
   80% {
     -webkit-transform: translateY(-10px) rotate(-45deg);
     -moz-transform: translateY(-10px) rotate(-45deg);
@@ -2068,7 +2123,7 @@ html.flexbox {
     transform: translateY(-10px) rotate(-45deg);
   }
 
-  /* line 124, sass/sections/_contact.scss */
+  /* line 152, sass/sections/_contact.scss */
   100% {
     -webkit-transform: translateY(0) rotate(-45deg);
     -moz-transform: translateY(0) rotate(-45deg);
@@ -2079,7 +2134,7 @@ html.flexbox {
 }
 
 @-moz-keyframes bounce {
-  /* line 110, sass/sections/_contact.scss */
+  /* line 138, sass/sections/_contact.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateY(-2000px) rotate(-45deg);
@@ -2089,7 +2144,7 @@ html.flexbox {
     transform: translateY(-2000px) rotate(-45deg);
   }
 
-  /* line 115, sass/sections/_contact.scss */
+  /* line 143, sass/sections/_contact.scss */
   60% {
     opacity: 1;
     -webkit-transform: translateY(30px) rotate(-45deg);
@@ -2099,7 +2154,7 @@ html.flexbox {
     transform: translateY(30px) rotate(-45deg);
   }
 
-  /* line 120, sass/sections/_contact.scss */
+  /* line 148, sass/sections/_contact.scss */
   80% {
     -webkit-transform: translateY(-10px) rotate(-45deg);
     -moz-transform: translateY(-10px) rotate(-45deg);
@@ -2108,7 +2163,7 @@ html.flexbox {
     transform: translateY(-10px) rotate(-45deg);
   }
 
-  /* line 124, sass/sections/_contact.scss */
+  /* line 152, sass/sections/_contact.scss */
   100% {
     -webkit-transform: translateY(0) rotate(-45deg);
     -moz-transform: translateY(0) rotate(-45deg);
@@ -2119,7 +2174,7 @@ html.flexbox {
 }
 
 @-ms-keyframes bounce {
-  /* line 110, sass/sections/_contact.scss */
+  /* line 138, sass/sections/_contact.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateY(-2000px) rotate(-45deg);
@@ -2129,7 +2184,7 @@ html.flexbox {
     transform: translateY(-2000px) rotate(-45deg);
   }
 
-  /* line 115, sass/sections/_contact.scss */
+  /* line 143, sass/sections/_contact.scss */
   60% {
     opacity: 1;
     -webkit-transform: translateY(30px) rotate(-45deg);
@@ -2139,7 +2194,7 @@ html.flexbox {
     transform: translateY(30px) rotate(-45deg);
   }
 
-  /* line 120, sass/sections/_contact.scss */
+  /* line 148, sass/sections/_contact.scss */
   80% {
     -webkit-transform: translateY(-10px) rotate(-45deg);
     -moz-transform: translateY(-10px) rotate(-45deg);
@@ -2148,7 +2203,7 @@ html.flexbox {
     transform: translateY(-10px) rotate(-45deg);
   }
 
-  /* line 124, sass/sections/_contact.scss */
+  /* line 152, sass/sections/_contact.scss */
   100% {
     -webkit-transform: translateY(0) rotate(-45deg);
     -moz-transform: translateY(0) rotate(-45deg);
@@ -2159,7 +2214,7 @@ html.flexbox {
 }
 
 @-o-keyframes bounce {
-  /* line 110, sass/sections/_contact.scss */
+  /* line 138, sass/sections/_contact.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateY(-2000px) rotate(-45deg);
@@ -2169,7 +2224,7 @@ html.flexbox {
     transform: translateY(-2000px) rotate(-45deg);
   }
 
-  /* line 115, sass/sections/_contact.scss */
+  /* line 143, sass/sections/_contact.scss */
   60% {
     opacity: 1;
     -webkit-transform: translateY(30px) rotate(-45deg);
@@ -2179,7 +2234,7 @@ html.flexbox {
     transform: translateY(30px) rotate(-45deg);
   }
 
-  /* line 120, sass/sections/_contact.scss */
+  /* line 148, sass/sections/_contact.scss */
   80% {
     -webkit-transform: translateY(-10px) rotate(-45deg);
     -moz-transform: translateY(-10px) rotate(-45deg);
@@ -2188,7 +2243,7 @@ html.flexbox {
     transform: translateY(-10px) rotate(-45deg);
   }
 
-  /* line 124, sass/sections/_contact.scss */
+  /* line 152, sass/sections/_contact.scss */
   100% {
     -webkit-transform: translateY(0) rotate(-45deg);
     -moz-transform: translateY(0) rotate(-45deg);
@@ -2199,7 +2254,7 @@ html.flexbox {
 }
 
 @keyframes bounce {
-  /* line 110, sass/sections/_contact.scss */
+  /* line 138, sass/sections/_contact.scss */
   0% {
     opacity: 0;
     -webkit-transform: translateY(-2000px) rotate(-45deg);
@@ -2209,7 +2264,7 @@ html.flexbox {
     transform: translateY(-2000px) rotate(-45deg);
   }
 
-  /* line 115, sass/sections/_contact.scss */
+  /* line 143, sass/sections/_contact.scss */
   60% {
     opacity: 1;
     -webkit-transform: translateY(30px) rotate(-45deg);
@@ -2219,7 +2274,7 @@ html.flexbox {
     transform: translateY(30px) rotate(-45deg);
   }
 
-  /* line 120, sass/sections/_contact.scss */
+  /* line 148, sass/sections/_contact.scss */
   80% {
     -webkit-transform: translateY(-10px) rotate(-45deg);
     -moz-transform: translateY(-10px) rotate(-45deg);
@@ -2228,7 +2283,7 @@ html.flexbox {
     transform: translateY(-10px) rotate(-45deg);
   }
 
-  /* line 124, sass/sections/_contact.scss */
+  /* line 152, sass/sections/_contact.scss */
   100% {
     -webkit-transform: translateY(0) rotate(-45deg);
     -moz-transform: translateY(0) rotate(-45deg);
@@ -2280,6 +2335,13 @@ html.flexbox {
   content: '•';
   padding-left: 20px;
   color: #fe8500;
+}
+
+/* line 39, sass/sections/_footer.scss */
+.love {
+  font: 14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+  line-height: 1.5em;
+  display: block;
 }
 
 /* line 1, sass/sections/_fourohfour.scss */
@@ -2397,26 +2459,31 @@ html.flexbox {
  * remains uniform.
  */
 /* line 55, sass/objects/_buttons.scss */
+.btn--micro {
+  font-size: .75em;
+}
+
+/* line 59, sass/objects/_buttons.scss */
 .btn--mini {
   font-size: .85em;
 }
 
-/* line 59, sass/objects/_buttons.scss */
+/* line 63, sass/objects/_buttons.scss */
 .btn--small {
   font-size: 1.2em;
 }
 
-/* line 63, sass/objects/_buttons.scss */
+/* line 67, sass/objects/_buttons.scss */
 .btn--medium {
   font-size: 1.4em;
 }
 
-/* line 67, sass/objects/_buttons.scss */
+/* line 71, sass/objects/_buttons.scss */
 .btn--large {
   font-size: 1.6em;
 }
 
-/* line 71, sass/objects/_buttons.scss */
+/* line 75, sass/objects/_buttons.scss */
 .btn--plus:before {
   content: "+ ";
 }
@@ -2426,7 +2493,7 @@ html.flexbox {
  *
  * 1. Remove padding so that widths and paddings don’t conflict.
  */
-/* line 80, sass/objects/_buttons.scss */
+/* line 84, sass/objects/_buttons.scss */
 .btn--full {
   width: 100%;
   padding-right: 0;
@@ -2442,17 +2509,17 @@ html.flexbox {
 /**
  * Button font-size modifiers.
  */
-/* line 97, sass/objects/_buttons.scss */
+/* line 101, sass/objects/_buttons.scss */
 .btn--alpha {
   font-size: 3rem;
 }
 
-/* line 101, sass/objects/_buttons.scss */
+/* line 105, sass/objects/_buttons.scss */
 .btn--beta {
   font-size: 2rem;
 }
 
-/* line 105, sass/objects/_buttons.scss */
+/* line 109, sass/objects/_buttons.scss */
 .btn--gamma {
   font-size: 1rem;
 }
@@ -2460,7 +2527,7 @@ html.flexbox {
 /**
  * Make the button inherit sizing from its parent.
  */
-/* line 112, sass/objects/_buttons.scss */
+/* line 116, sass/objects/_buttons.scss */
 .btn--natural {
   vertical-align: baseline;
   font-size: inherit;
@@ -2478,7 +2545,7 @@ html.flexbox {
 /**
  * Positive actions; e.g. sign in, purchase, submit, etc.
  */
-/* line 137, sass/objects/_buttons.scss */
+/* line 141, sass/objects/_buttons.scss */
 .btn--positive {
   background-color: #4A993E;
   color: #fff;
@@ -2487,7 +2554,7 @@ html.flexbox {
 /**
  * Negative actions; e.g. close account, delete photo, remove friend, etc.
  */
-/* line 145, sass/objects/_buttons.scss */
+/* line 149, sass/objects/_buttons.scss */
 .btn--negative {
   background-color: #b33630;
   color: #fff;
@@ -2498,7 +2565,7 @@ html.flexbox {
  * 
  * 1. Make the button look like normal text when hovered.
  */
-/* line 158, sass/objects/_buttons.scss */
+/* line 162, sass/objects/_buttons.scss */
 .btn--inactive,
 .btn--inactive:hover,
 .btn--inactive:active,
@@ -2517,51 +2584,56 @@ html.flexbox {
  *
  * 1. Use an overly-large number to ensure completely rounded, pill-like ends.
  */
-/* line 177, sass/objects/_buttons.scss */
+/* line 181, sass/objects/_buttons.scss */
 .btn--white {
   background: #FFF;
   color: #21262c;
 }
-/* line 181, sass/objects/_buttons.scss */
+/* line 185, sass/objects/_buttons.scss */
 .btn--white:hover {
   background: #fe8500;
   color: #FFF;
 }
 
-/* line 187, sass/objects/_buttons.scss */
+/* line 191, sass/objects/_buttons.scss */
 .btn--orange {
   background: #fe8500;
   color: #FFF;
 }
-/* line 191, sass/objects/_buttons.scss */
+/* line 195, sass/objects/_buttons.scss */
 .btn--orange:hover {
   background: #ff9828;
   color: #FFF;
 }
 
-/* line 197, sass/objects/_buttons.scss */
+/* line 201, sass/objects/_buttons.scss */
 .btn--black {
   background: #21262c;
   color: #FFF;
 }
-/* line 201, sass/objects/_buttons.scss */
+/* line 205, sass/objects/_buttons.scss */
 .btn--black:hover {
   background: #323a43;
   color: #FFF;
 }
 
-/* line 207, sass/objects/_buttons.scss */
+/* line 211, sass/objects/_buttons.scss */
 .btn--soft {
   border-radius: 200px;
   /* [1] */
 }
 
-/* line 211, sass/objects/_buttons.scss */
+/* line 215, sass/objects/_buttons.scss */
 .btn--hard {
   border-radius: 0;
 }
 
 /* line 1, sass/objects/_forms.scss */
+.form__more-info {
+  font-family: "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
+}
+
+/* line 5, sass/objects/_forms.scss */
 .input__text, .input__textarea {
   text-align: left;
   letter-spacing: 1px;
@@ -2586,30 +2658,30 @@ html.flexbox {
   transition: border-color 0.25s ease;
   color: #21262c;
 }
-/* line 17, sass/objects/_forms.scss */
+/* line 21, sass/objects/_forms.scss */
 .input__text.full, .input__textarea.full {
   width: 100%;
 }
-/* line 21, sass/objects/_forms.scss */
+/* line 25, sass/objects/_forms.scss */
 .input__text.required, .input__textarea.required {
   background: transparent url("images/asterisk.png") 97.5% center no-repeat;
 }
-/* line 25, sass/objects/_forms.scss */
+/* line 29, sass/objects/_forms.scss */
 .input__text:hover, .input__textarea:hover {
   border-color: #777;
 }
-/* line 29, sass/objects/_forms.scss */
+/* line 33, sass/objects/_forms.scss */
 .input__text:focus, .input__textarea:focus {
   border-color: #fe8500;
   outline: none;
 }
 
-/* line 36, sass/objects/_forms.scss */
+/* line 40, sass/objects/_forms.scss */
 .input__textarea.required {
   background: transparent url("images/asterisk.png") 97.5% 20px no-repeat;
 }
 
-/* line 41, sass/objects/_forms.scss */
+/* line 45, sass/objects/_forms.scss */
 .form-check {
   position: relative;
   text-align: left;
@@ -2637,16 +2709,16 @@ html.flexbox {
   display: block;
   color: #A1A1A1;
 }
-/* line 61, sass/objects/_forms.scss */
+/* line 65, sass/objects/_forms.scss */
 .form-check.full {
   width: 100%;
 }
-/* line 65, sass/objects/_forms.scss */
+/* line 69, sass/objects/_forms.scss */
 .form-check:hover {
   border-color: #777;
 }
 
-/* line 70, sass/objects/_forms.scss */
+/* line 74, sass/objects/_forms.scss */
 .form-check__checkbox {
   position: absolute;
   top: 50%;
@@ -2656,6 +2728,154 @@ html.flexbox {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+/* line 81, sass/objects/_forms.scss */
+.custom-select__hidden {
+  position: absolute;
+  top: -8000px;
+}
+
+/* line 86, sass/objects/_forms.scss */
+.custom-select {
+  text-align: left;
+  letter-spacing: 1px;
+  padding: 20px 2.5%;
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 1em;
+  line-height: 1.3em;
+  background-color: #FFF;
+  border: 1px solid #DBDBDB;
+  font-family: "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 300;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-transition: border-color 0.25s ease;
+  -moz-transition: border-color 0.25s ease;
+  -ms-transition: border-color 0.25s ease;
+  -o-transition: border-color 0.25s ease;
+  transition: border-color 0.25s ease;
+  color: #A1A1A1;
+  position: relative;
+}
+/* line 103, sass/objects/_forms.scss */
+.custom-select.full {
+  width: 100%;
+}
+/* line 107, sass/objects/_forms.scss */
+.custom-select:hover {
+  border-color: #777;
+}
+/* line 111, sass/objects/_forms.scss */
+.custom-select:focus {
+  border-color: #fe8500;
+  outline: none;
+}
+/* line 116, sass/objects/_forms.scss */
+.custom-select:after {
+  position: absolute;
+  right: 3%;
+  top: 21px;
+  display: block;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-right-color: #333;
+  border-bottom-color: #333;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* line 132, sass/objects/_forms.scss */
+.custom-select__list {
+  width: 100%;
+  padding: 5px 2.5%;
+  line-height: 2;
+  list-style: none;
+  z-index: 10000;
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+  background-color: #FFF;
+  border: 1px solid #fe8500;
+  border-top-color: #FFF;
+  -webkit-border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -ms-border-radius: 0 0 4px 4px;
+  -o-border-radius: 0 0 4px 4px;
+  border-radius: 0 0 4px 4px;
+  -webkit-transform: scale(0.95) translateY(-8px);
+  -moz-transform: scale(0.95) translateY(-8px);
+  -ms-transform: scale(0.95) translateY(-8px);
+  -o-transform: scale(0.95) translateY(-8px);
+  transform: scale(0.95) translateY(-8px);
+  -webkit-transition-property: transform, opacity;
+  -moz-transition-property: transform, opacity;
+  -ms-transition-property: transform, opacity;
+  -o-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -ms-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -moz-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -ms-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -o-transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  transition-timing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-weight: 300;
+}
+/* line 153, sass/objects/_forms.scss */
+.custom-select__list li {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+/* line 158, sass/objects/_forms.scss */
+.custom-select__list li:hover {
+  color: #fe8500;
+}
+
+/* line 164, sass/objects/_forms.scss */
+.custom-select__active {
+  opacity: 1;
+  -webkit-transform: scale(1) translateY(55px);
+  -moz-transform: scale(1) translateY(55px);
+  -ms-transform: scale(1) translateY(55px);
+  -o-transform: scale(1) translateY(55px);
+  transform: scale(1) translateY(55px);
+  pointer-events: auto;
+}
+
+/* line 170, sass/objects/_forms.scss */
+.custom-select__selected {
+  font-weight: 600;
+}
+/* line 173, sass/objects/_forms.scss */
+.custom-select__selected:hover {
+  color: #21262c !important;
+}
+/* line 177, sass/objects/_forms.scss */
+.custom-select__selected:after {
+  display: inline-block;
+  content: "✓";
+  float: right;
 }
 
 /* line 1, sass/base/_main.scss */

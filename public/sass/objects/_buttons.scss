@@ -52,6 +52,10 @@
  * These all follow the same sizing rules as above; text is 1em, space around it
  * remains uniform.
  */
+.btn--micro{
+  font-size: .75em;
+}
+
 .btn--mini{
   font-size: .85em;
 }

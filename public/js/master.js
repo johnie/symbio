@@ -42,7 +42,7 @@ function whereWeAt() {
     // 59.330211,18.055214
     map = new GMaps({
         el: "#map",
-        lat: 59.330211,
+        lat: 59.330611,
         lng: 18.055214,
         zoom: 16,
         zoomControl: false,
@@ -60,7 +60,7 @@ function whereWeAt() {
     map.drawOverlay({
         lat: 59.330211,
         lng: 18.055214,
-        content: "<div class='pin-wrap'><div class='pin'></div><div class='pulse'></div></div>"
+        content: "<div class='pin-wrap'><div class='bubble'>Klarabergsviadukten 63</div><div class='pin'></div><div class='pulse'></div></div>"
     });
 }
 
@@ -71,11 +71,13 @@ function startAProject() {
     var projectBtn      = $("#startAProject"),
         projectWrap     = $(".start-a-project"),
         scrollTarget    = $(".contact-section");
-        
+
+    projectWrap.addClass("hidden");
+
     projectBtn.click(function(e) {
 
         $(this).text(function(i, text){
-          return text === "Start a project" ? "Close" : "Start a project";
+          return text === "+ Start a project" ? "Close" : "+ Start a project";
         })
 
         e.preventDefault();
@@ -96,7 +98,18 @@ function startAProject() {
 
 }
 
-startAProject();
+// startAProject();
+
+function jumpNext() {
+    $(".jump-next[href*=#]").click(function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($(this).attr("href")).offset().top
+        }, 250);
+    });
+}
+
+jumpNext();
 
 // Various functions and features
 $(function(){
@@ -106,10 +119,12 @@ $(function(){
         $(".main-section").addClass("js-bg-scroll");
     }
 
-    $("#jump-next").click(function(e) {
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $(".main").offset().top
-        }, 250);
-    });
+    new CustomSelect("select", {
+		hiddenSelectClass : "custom-select__hidden",
+		customSelectClass : "custom-select full",
+        listSelectClass : "custom-select__list",
+		activeListClass : "custom-select__active",
+		selectedOptionClass : "custom-select__selected"
+	});
+
 });
