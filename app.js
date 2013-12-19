@@ -1,6 +1,7 @@
 var express = require('express'),
     http = require('http'),
-    path = require('path');
+    path = require('path'),
+    nodemailer = require('nodemailer');
 
 var app = express();
 
@@ -23,6 +24,44 @@ app.get("/", function(req, res) {
         desc: "We love creating web & mobile apps",
         title: "Symbio - We love creating web & mobile apps"
     });
+});
+
+app.post("/contact", function(req, res) {
+    var smtpTransport, mailOptions;
+
+        // send mail with defined transport object
+    smtpTransport.sendMail(mailOptions, function(error, response){
+        mailOptions.subject = subject;
+        mailOptions.text = text;
+        mailOptions.html = html;
+
+        if(error){
+            console.log(error);
+            alert(error);
+        }else{
+            console.log("Message sent: " + response.message);
+            alert("Message sent: " + response.message);
+        }
+    });
+
+    smtpTransport = nodemailer.createTransport("SMTP",{
+        host : 'smtp.mandrillapp.com',
+        port : 587,
+        auth: {
+            user: 'johnie.hjelm@symbio.com',
+            pass: 'dEPPbyhAdDSK_JHAMvGPzw'
+        }
+    });
+
+    // setup e-mail data with unicode symbols
+    mailOptions = {
+        from: req.body.name + ' &lt;' + req.body.email + '&gt;', // sender address
+        to: 'johniehjelm@me.com',
+        text: req.body.message // list of receivers separate with dot
+        // subject: "United Spaces - new catering order", // Subject line
+        // text: "New catering order. Please go to reservation system to view the catering orders.", // plaintext body
+        // html: "<b>New catering order</b><br/><br/><p>Please go to reservation system to view the catering orders.</p>" // html body
+    }
 });
 
 app.use(function(req, res, next){

@@ -98,7 +98,7 @@ function startAProject() {
 
 }
 
-// startAProject();
+startAProject();
 
 function jumpNext() {
     $(".jump-next[href*=#]").click(function(e) {

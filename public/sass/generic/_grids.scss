@@ -72,13 +72,6 @@
         @include vendor(box-sizing, border-box);
     }
 
-		@media (max-width: $phone-size) {
-		   .grid__item{
-				float:none;
-				width: 100% !important;
-		   }
-		}
-
 .flexbox{
     display:table;
     width:100%;
@@ -96,3 +89,27 @@ html.flexbox{
         display:table-cell;
         vertical-align:middle;
     }
+
+@media (max-width: $phone-size) {
+  .grid__item{
+    float:none;
+    width: 100% !important;
+      &:after{
+        content:"";
+        display:table;
+        clear:both;
+      }
+  }
+  .flexbox__item{
+    display: block;
+    vertical-align: top;
+    width: 100% !important;
+    float: none;
+
+      &:after{
+        content:"";
+        display:table;
+        clear:both;
+      }
+  }
+}

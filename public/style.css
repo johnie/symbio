@@ -45,8 +45,14 @@
   line-height: 1.5;
   margin-bottom: 30px;
 }
+@media (max-width: 600px) {
+  /* line 26, sass/base/_headings.scss */
+  .section-subtitle {
+    font-size: 1.1em;
+  }
+}
 
-/* line 35, sass/base/_headings.scss */
+/* line 39, sass/base/_headings.scss */
 .section-col__title {
   font-size: 15px;
   letter-spacing: 1px;
@@ -57,7 +63,7 @@
   margin-bottom: 10px;
 }
 
-/* line 45, sass/base/_headings.scss */
+/* line 49, sass/base/_headings.scss */
 .form__title {
   font-size: 24px;
   color: #21262c;
@@ -217,6 +223,16 @@ p {
 /* line 8, sass/base/_paragraphs.scss */
 p.intro {
   font-size: 18px;
+}
+@media (max-width: 600px) {
+  /* line 1, sass/base/_paragraphs.scss */
+  p {
+    font-size: 14px;
+  }
+  /* line 15, sass/base/_paragraphs.scss */
+  p.intro {
+    font-size: 16px;
+  }
 }
 
 /**
@@ -1184,14 +1200,7 @@ fieldset {
   box-sizing: border-box;
 }
 
-@media (max-width: 600px) {
-  /* line 76, sass/generic/_grids.scss */
-  .grid__item {
-    float: none;
-    width: 100% !important;
-  }
-}
-/* line 82, sass/generic/_grids.scss */
+/* line 75, sass/generic/_grids.scss */
 .flexbox {
   display: table;
   width: 100%;
@@ -1200,18 +1209,45 @@ fieldset {
 /**
  * Nasty hack to circumvent Modernizr conflicts.
  */
-/* line 90, sass/generic/_grids.scss */
+/* line 83, sass/generic/_grids.scss */
 html.flexbox {
   display: block;
   width: auto;
 }
 
-/* line 95, sass/generic/_grids.scss */
+/* line 88, sass/generic/_grids.scss */
 .flexbox__item {
   display: table-cell;
   vertical-align: middle;
 }
 
+@media (max-width: 600px) {
+  /* line 94, sass/generic/_grids.scss */
+  .grid__item {
+    float: none;
+    width: 100% !important;
+  }
+  /* line 97, sass/generic/_grids.scss */
+  .grid__item:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* line 103, sass/generic/_grids.scss */
+  .flexbox__item {
+    display: block;
+    vertical-align: top;
+    width: 100% !important;
+    float: none;
+  }
+  /* line 109, sass/generic/_grids.scss */
+  .flexbox__item:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
 /*------------------------------------*\
     $WIDTHS
 \*------------------------------------*/
@@ -2293,6 +2329,925 @@ html.flexbox {
   }
 }
 
+@-webkit-keyframes show-shell {
+  /* line 2, sass/sections/_expertteam.scss */
+  from {
+    opacity: 0;
+  }
+
+  /* line 5, sass/sections/_expertteam.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes show-shell {
+  /* line 2, sass/sections/_expertteam.scss */
+  from {
+    opacity: 0;
+  }
+
+  /* line 5, sass/sections/_expertteam.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes show-shell {
+  /* line 2, sass/sections/_expertteam.scss */
+  from {
+    opacity: 0;
+  }
+
+  /* line 5, sass/sections/_expertteam.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes show-shell {
+  /* line 2, sass/sections/_expertteam.scss */
+  from {
+    opacity: 0;
+  }
+
+  /* line 5, sass/sections/_expertteam.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes show-shell {
+  /* line 2, sass/sections/_expertteam.scss */
+  from {
+    opacity: 0;
+  }
+
+  /* line 5, sass/sections/_expertteam.scss */
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes typing1 {
+  /* line 11, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 14, sass/sections/_expertteam.scss */
+  to {
+    width: 280px;
+  }
+}
+
+@-moz-keyframes typing1 {
+  /* line 11, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 14, sass/sections/_expertteam.scss */
+  to {
+    width: 280px;
+  }
+}
+
+@-ms-keyframes typing1 {
+  /* line 11, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 14, sass/sections/_expertteam.scss */
+  to {
+    width: 280px;
+  }
+}
+
+@-o-keyframes typing1 {
+  /* line 11, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 14, sass/sections/_expertteam.scss */
+  to {
+    width: 280px;
+  }
+}
+
+@keyframes typing1 {
+  /* line 11, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 14, sass/sections/_expertteam.scss */
+  to {
+    width: 280px;
+  }
+}
+
+@-webkit-keyframes typing2 {
+  /* line 19, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 22, sass/sections/_expertteam.scss */
+  to {
+    width: 170px;
+  }
+}
+
+@-moz-keyframes typing2 {
+  /* line 19, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 22, sass/sections/_expertteam.scss */
+  to {
+    width: 170px;
+  }
+}
+
+@-ms-keyframes typing2 {
+  /* line 19, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 22, sass/sections/_expertteam.scss */
+  to {
+    width: 170px;
+  }
+}
+
+@-o-keyframes typing2 {
+  /* line 19, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 22, sass/sections/_expertteam.scss */
+  to {
+    width: 170px;
+  }
+}
+
+@keyframes typing2 {
+  /* line 19, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 22, sass/sections/_expertteam.scss */
+  to {
+    width: 170px;
+  }
+}
+
+@-webkit-keyframes typing3 {
+  /* line 27, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 30, sass/sections/_expertteam.scss */
+  to {
+    width: 190px;
+  }
+}
+
+@-moz-keyframes typing3 {
+  /* line 27, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 30, sass/sections/_expertteam.scss */
+  to {
+    width: 190px;
+  }
+}
+
+@-ms-keyframes typing3 {
+  /* line 27, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 30, sass/sections/_expertteam.scss */
+  to {
+    width: 190px;
+  }
+}
+
+@-o-keyframes typing3 {
+  /* line 27, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 30, sass/sections/_expertteam.scss */
+  to {
+    width: 190px;
+  }
+}
+
+@keyframes typing3 {
+  /* line 27, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 30, sass/sections/_expertteam.scss */
+  to {
+    width: 190px;
+  }
+}
+
+@-webkit-keyframes typing4 {
+  /* line 35, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 38, sass/sections/_expertteam.scss */
+  to {
+    width: 160px;
+  }
+}
+
+@-moz-keyframes typing4 {
+  /* line 35, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 38, sass/sections/_expertteam.scss */
+  to {
+    width: 160px;
+  }
+}
+
+@-ms-keyframes typing4 {
+  /* line 35, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 38, sass/sections/_expertteam.scss */
+  to {
+    width: 160px;
+  }
+}
+
+@-o-keyframes typing4 {
+  /* line 35, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 38, sass/sections/_expertteam.scss */
+  to {
+    width: 160px;
+  }
+}
+
+@keyframes typing4 {
+  /* line 35, sass/sections/_expertteam.scss */
+  from {
+    width: 0;
+  }
+
+  /* line 38, sass/sections/_expertteam.scss */
+  to {
+    width: 160px;
+  }
+}
+
+/* line 43, sass/sections/_expertteam.scss */
+.terminal {
+  background-color: #3D3D3D;
+  border-top: 25px solid #BABABA;
+  -webkit-box-shadow: 0 0 0 1px #252525;
+  -moz-box-shadow: 0 0 0 1px #252525;
+  -ms-box-shadow: 0 0 0 1px #252525;
+  -o-box-shadow: 0 0 0 1px #252525;
+  box-shadow: 0 0 0 1px #252525;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  padding: 15px;
+  padding-top: 20px;
+  height: 200px;
+  max-width: 370px;
+  margin: 0 auto;
+  position: relative;
+}
+/* line 55, sass/sections/_expertteam.scss */
+.terminal:before {
+  position: absolute;
+  content: "symbio — bash — 370x200";
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+  top: -26px;
+  left: 0;
+  font-size: 10px;
+  color: #21262c;
+  font-family: "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
+}
+/* line 69, sass/sections/_expertteam.scss */
+.terminal p {
+  color: #FFF;
+  font-weight: normal;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-size: 18px;
+  font-family: Consolas, monospace, Menlo, Monaco !important;
+}
+/* line 77, sass/sections/_expertteam.scss */
+.terminal .path, .terminal .prompt {
+  position: relative;
+  top: -9px;
+}
+/* line 82, sass/sections/_expertteam.scss */
+.terminal .path {
+  color: #71cfee;
+  padding-right: 5px;
+}
+/* line 87, sass/sections/_expertteam.scss */
+.terminal .prompt {
+  color: #d74d52;
+  padding-right: 10px;
+}
+/* line 92, sass/sections/_expertteam.scss */
+.terminal .command {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@media (max-width: 600px) {
+  /* line 43, sass/sections/_expertteam.scss */
+  .terminal {
+    margin-bottom: 30px;
+  }
+}
+
+/* line 103, sass/sections/_expertteam.scss */
+.shell:nth-child(1) {
+  -webkit-animation: show-shell 0.1s 2s alternate backwards;
+  -moz-animation: show-shell 0.1s 2s alternate backwards;
+  -ms-animation: show-shell 0.1s 2s alternate backwards;
+  -o-animation: show-shell 0.1s 2s alternate backwards;
+  animation: show-shell 0.1s 2s alternate backwards;
+}
+/* line 106, sass/sections/_expertteam.scss */
+.shell:nth-child(1) .command {
+  -webkit-animation: typing1 2s 2s steps(28, end);
+  -moz-animation: typing1 2s 2s steps(28, end);
+  -ms-animation: typing1 2s 2s steps(28, end);
+  -o-animation: typing1 2s 2s steps(28, end);
+  animation: typing1 2s 2s steps(28, end);
+}
+
+/* line 111, sass/sections/_expertteam.scss */
+.shell:nth-child(2) {
+  -webkit-animation: show-shell 0.1s 5s alternate backwards;
+  -moz-animation: show-shell 0.1s 5s alternate backwards;
+  -ms-animation: show-shell 0.1s 5s alternate backwards;
+  -o-animation: show-shell 0.1s 5s alternate backwards;
+  animation: show-shell 0.1s 5s alternate backwards;
+}
+/* line 114, sass/sections/_expertteam.scss */
+.shell:nth-child(2) .command {
+  -webkit-animation: typing2 2s 5s steps(17, end);
+  -moz-animation: typing2 2s 5s steps(17, end);
+  -ms-animation: typing2 2s 5s steps(17, end);
+  -o-animation: typing2 2s 5s steps(17, end);
+  animation: typing2 2s 5s steps(17, end);
+}
+
+/* line 119, sass/sections/_expertteam.scss */
+.shell:nth-child(3) {
+  -webkit-animation: show-shell 0.1s 8s alternate backwards;
+  -moz-animation: show-shell 0.1s 8s alternate backwards;
+  -ms-animation: show-shell 0.1s 8s alternate backwards;
+  -o-animation: show-shell 0.1s 8s alternate backwards;
+  animation: show-shell 0.1s 8s alternate backwards;
+}
+/* line 122, sass/sections/_expertteam.scss */
+.shell:nth-child(3) .command {
+  -webkit-animation: typing3 2s 8s steps(19, end);
+  -moz-animation: typing3 2s 8s steps(19, end);
+  -ms-animation: typing3 2s 8s steps(19, end);
+  -o-animation: typing3 2s 8s steps(19, end);
+  animation: typing3 2s 8s steps(19, end);
+}
+
+/* line 127, sass/sections/_expertteam.scss */
+.shell:nth-child(4) {
+  -webkit-animation: show-shell 0.1s 11s alternate backwards;
+  -moz-animation: show-shell 0.1s 11s alternate backwards;
+  -ms-animation: show-shell 0.1s 11s alternate backwards;
+  -o-animation: show-shell 0.1s 11s alternate backwards;
+  animation: show-shell 0.1s 11s alternate backwards;
+}
+/* line 130, sass/sections/_expertteam.scss */
+.shell:nth-child(4) .command {
+  -webkit-animation: typing4 2s 11s steps(16, end);
+  -moz-animation: typing4 2s 11s steps(16, end);
+  -ms-animation: typing4 2s 11s steps(16, end);
+  -o-animation: typing4 2s 11s steps(16, end);
+  animation: typing4 2s 11s steps(16, end);
+}
+
+@-webkit-keyframes fast {
+  /* line 2, sass/sections/_customer.scss */
+  0% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+
+  /* line 3, sass/sections/_customer.scss */
+  20% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+
+  /* line 4, sass/sections/_customer.scss */
+  35% {
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    -o-transform: rotate(80deg);
+    transform: rotate(80deg);
+  }
+
+  /* line 5, sass/sections/_customer.scss */
+  48% {
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    -o-transform: rotate(80deg);
+    transform: rotate(80deg);
+  }
+
+  /* line 6, sass/sections/_customer.scss */
+  51% {
+    -webkit-transform: rotate(72deg);
+    -moz-transform: rotate(72deg);
+    -ms-transform: rotate(72deg);
+    -o-transform: rotate(72deg);
+    transform: rotate(72deg);
+  }
+
+  /* line 7, sass/sections/_customer.scss */
+  53% {
+    -webkit-transform: rotate(84deg);
+    -moz-transform: rotate(84deg);
+    -ms-transform: rotate(84deg);
+    -o-transform: rotate(84deg);
+    transform: rotate(84deg);
+  }
+
+  /* line 8, sass/sections/_customer.scss */
+  55% {
+    -webkit-transform: rotate(66deg);
+    -moz-transform: rotate(66deg);
+    -ms-transform: rotate(66deg);
+    -o-transform: rotate(66deg);
+    transform: rotate(66deg);
+  }
+
+  /* line 9, sass/sections/_customer.scss */
+  58% {
+    -webkit-transform: rotate(84deg);
+    -moz-transform: rotate(84deg);
+    -ms-transform: rotate(84deg);
+    -o-transform: rotate(84deg);
+    transform: rotate(84deg);
+  }
+
+  /* line 10, sass/sections/_customer.scss */
+  81% {
+    -webkit-transform: rotate(85deg);
+    -moz-transform: rotate(85deg);
+    -ms-transform: rotate(85deg);
+    -o-transform: rotate(85deg);
+    transform: rotate(85deg);
+  }
+
+  /* line 11, sass/sections/_customer.scss */
+  100% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+}
+
+@-moz-keyframes fast {
+  /* line 2, sass/sections/_customer.scss */
+  0% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+
+  /* line 3, sass/sections/_customer.scss */
+  20% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+
+  /* line 4, sass/sections/_customer.scss */
+  35% {
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    -o-transform: rotate(80deg);
+    transform: rotate(80deg);
+  }
+
+  /* line 5, sass/sections/_customer.scss */
+  48% {
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    -o-transform: rotate(80deg);
+    transform: rotate(80deg);
+  }
+
+  /* line 6, sass/sections/_customer.scss */
+  51% {
+    -webkit-transform: rotate(72deg);
+    -moz-transform: rotate(72deg);
+    -ms-transform: rotate(72deg);
+    -o-transform: rotate(72deg);
+    transform: rotate(72deg);
+  }
+
+  /* line 7, sass/sections/_customer.scss */
+  53% {
+    -webkit-transform: rotate(84deg);
+    -moz-transform: rotate(84deg);
+    -ms-transform: rotate(84deg);
+    -o-transform: rotate(84deg);
+    transform: rotate(84deg);
+  }
+
+  /* line 8, sass/sections/_customer.scss */
+  55% {
+    -webkit-transform: rotate(66deg);
+    -moz-transform: rotate(66deg);
+    -ms-transform: rotate(66deg);
+    -o-transform: rotate(66deg);
+    transform: rotate(66deg);
+  }
+
+  /* line 9, sass/sections/_customer.scss */
+  58% {
+    -webkit-transform: rotate(84deg);
+    -moz-transform: rotate(84deg);
+    -ms-transform: rotate(84deg);
+    -o-transform: rotate(84deg);
+    transform: rotate(84deg);
+  }
+
+  /* line 10, sass/sections/_customer.scss */
+  81% {
+    -webkit-transform: rotate(85deg);
+    -moz-transform: rotate(85deg);
+    -ms-transform: rotate(85deg);
+    -o-transform: rotate(85deg);
+    transform: rotate(85deg);
+  }
+
+  /* line 11, sass/sections/_customer.scss */
+  100% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+}
+
+@-ms-keyframes fast {
+  /* line 2, sass/sections/_customer.scss */
+  0% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+
+  /* line 3, sass/sections/_customer.scss */
+  20% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+
+  /* line 4, sass/sections/_customer.scss */
+  35% {
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    -o-transform: rotate(80deg);
+    transform: rotate(80deg);
+  }
+
+  /* line 5, sass/sections/_customer.scss */
+  48% {
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    -o-transform: rotate(80deg);
+    transform: rotate(80deg);
+  }
+
+  /* line 6, sass/sections/_customer.scss */
+  51% {
+    -webkit-transform: rotate(72deg);
+    -moz-transform: rotate(72deg);
+    -ms-transform: rotate(72deg);
+    -o-transform: rotate(72deg);
+    transform: rotate(72deg);
+  }
+
+  /* line 7, sass/sections/_customer.scss */
+  53% {
+    -webkit-transform: rotate(84deg);
+    -moz-transform: rotate(84deg);
+    -ms-transform: rotate(84deg);
+    -o-transform: rotate(84deg);
+    transform: rotate(84deg);
+  }
+
+  /* line 8, sass/sections/_customer.scss */
+  55% {
+    -webkit-transform: rotate(66deg);
+    -moz-transform: rotate(66deg);
+    -ms-transform: rotate(66deg);
+    -o-transform: rotate(66deg);
+    transform: rotate(66deg);
+  }
+
+  /* line 9, sass/sections/_customer.scss */
+  58% {
+    -webkit-transform: rotate(84deg);
+    -moz-transform: rotate(84deg);
+    -ms-transform: rotate(84deg);
+    -o-transform: rotate(84deg);
+    transform: rotate(84deg);
+  }
+
+  /* line 10, sass/sections/_customer.scss */
+  81% {
+    -webkit-transform: rotate(85deg);
+    -moz-transform: rotate(85deg);
+    -ms-transform: rotate(85deg);
+    -o-transform: rotate(85deg);
+    transform: rotate(85deg);
+  }
+
+  /* line 11, sass/sections/_customer.scss */
+  100% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+}
+
+@-o-keyframes fast {
+  /* line 2, sass/sections/_customer.scss */
+  0% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+
+  /* line 3, sass/sections/_customer.scss */
+  20% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+
+  /* line 4, sass/sections/_customer.scss */
+  35% {
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    -o-transform: rotate(80deg);
+    transform: rotate(80deg);
+  }
+
+  /* line 5, sass/sections/_customer.scss */
+  48% {
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    -o-transform: rotate(80deg);
+    transform: rotate(80deg);
+  }
+
+  /* line 6, sass/sections/_customer.scss */
+  51% {
+    -webkit-transform: rotate(72deg);
+    -moz-transform: rotate(72deg);
+    -ms-transform: rotate(72deg);
+    -o-transform: rotate(72deg);
+    transform: rotate(72deg);
+  }
+
+  /* line 7, sass/sections/_customer.scss */
+  53% {
+    -webkit-transform: rotate(84deg);
+    -moz-transform: rotate(84deg);
+    -ms-transform: rotate(84deg);
+    -o-transform: rotate(84deg);
+    transform: rotate(84deg);
+  }
+
+  /* line 8, sass/sections/_customer.scss */
+  55% {
+    -webkit-transform: rotate(66deg);
+    -moz-transform: rotate(66deg);
+    -ms-transform: rotate(66deg);
+    -o-transform: rotate(66deg);
+    transform: rotate(66deg);
+  }
+
+  /* line 9, sass/sections/_customer.scss */
+  58% {
+    -webkit-transform: rotate(84deg);
+    -moz-transform: rotate(84deg);
+    -ms-transform: rotate(84deg);
+    -o-transform: rotate(84deg);
+    transform: rotate(84deg);
+  }
+
+  /* line 10, sass/sections/_customer.scss */
+  81% {
+    -webkit-transform: rotate(85deg);
+    -moz-transform: rotate(85deg);
+    -ms-transform: rotate(85deg);
+    -o-transform: rotate(85deg);
+    transform: rotate(85deg);
+  }
+
+  /* line 11, sass/sections/_customer.scss */
+  100% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+}
+
+@keyframes fast {
+  /* line 2, sass/sections/_customer.scss */
+  0% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+
+  /* line 3, sass/sections/_customer.scss */
+  20% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+
+  /* line 4, sass/sections/_customer.scss */
+  35% {
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    -o-transform: rotate(80deg);
+    transform: rotate(80deg);
+  }
+
+  /* line 5, sass/sections/_customer.scss */
+  48% {
+    -webkit-transform: rotate(80deg);
+    -moz-transform: rotate(80deg);
+    -ms-transform: rotate(80deg);
+    -o-transform: rotate(80deg);
+    transform: rotate(80deg);
+  }
+
+  /* line 6, sass/sections/_customer.scss */
+  51% {
+    -webkit-transform: rotate(72deg);
+    -moz-transform: rotate(72deg);
+    -ms-transform: rotate(72deg);
+    -o-transform: rotate(72deg);
+    transform: rotate(72deg);
+  }
+
+  /* line 7, sass/sections/_customer.scss */
+  53% {
+    -webkit-transform: rotate(84deg);
+    -moz-transform: rotate(84deg);
+    -ms-transform: rotate(84deg);
+    -o-transform: rotate(84deg);
+    transform: rotate(84deg);
+  }
+
+  /* line 8, sass/sections/_customer.scss */
+  55% {
+    -webkit-transform: rotate(66deg);
+    -moz-transform: rotate(66deg);
+    -ms-transform: rotate(66deg);
+    -o-transform: rotate(66deg);
+    transform: rotate(66deg);
+  }
+
+  /* line 9, sass/sections/_customer.scss */
+  58% {
+    -webkit-transform: rotate(84deg);
+    -moz-transform: rotate(84deg);
+    -ms-transform: rotate(84deg);
+    -o-transform: rotate(84deg);
+    transform: rotate(84deg);
+  }
+
+  /* line 10, sass/sections/_customer.scss */
+  81% {
+    -webkit-transform: rotate(85deg);
+    -moz-transform: rotate(85deg);
+    -ms-transform: rotate(85deg);
+    -o-transform: rotate(85deg);
+    transform: rotate(85deg);
+  }
+
+  /* line 11, sass/sections/_customer.scss */
+  100% {
+    -webkit-transform: rotate(-80deg);
+    -moz-transform: rotate(-80deg);
+    -ms-transform: rotate(-80deg);
+    -o-transform: rotate(-80deg);
+    transform: rotate(-80deg);
+  }
+}
+
+/* line 14, sass/sections/_customer.scss */
+.speedometer {
+  margin: 0 auto;
+  display: block;
+}
+
+/* line 19, sass/sections/_customer.scss */
+#ticker {
+  -webkit-transform-origin: center 150px;
+  -moz-transform-origin: center 150px;
+  -ms-transform-origin: center 150px;
+  -o-transform-origin: center 150px;
+  transform-origin: center 150px;
+  -webkit-animation: fast 6s infinite ease;
+  -moz-animation: fast 6s infinite ease;
+  -ms-animation: fast 6s infinite ease;
+  -o-animation: fast 6s infinite ease;
+  animation: fast 6s infinite ease;
+}
+
 /* line 1, sass/sections/_footer.scss */
 .footer {
   background: #21262c;
@@ -3035,4 +3990,11 @@ a:hover {
 /* line 132, sass/base/_main.scss */
 .section-cols__col:last-child {
   margin-bottom: 0;
+}
+
+/* line 137, sass/base/_main.scss */
+.analytics {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
 }

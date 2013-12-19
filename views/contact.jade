@@ -71,13 +71,33 @@ section(class="contact-section" id="contact")
                             We're down to earth, approachable people so no matter what's on your mind just drop us a line, we'd love to hear from you.
 
                         p
-                            a(href="#") info@symbiosweden.se
+                            a(href="mailto:anders.carlsarv@symbio.com") anders.carlsarv@symbio.com
+                        
+                        p.
+                            +46 73-389 68 53
+
+                        h4.form__title.
+                            Elsewhere
+
+                        ul.social
+                            li
+                                span.entypo-facebook
+                            li
+                                span.entypo-twitter
+                            li
+                                span.entypo-linkedin
 
                     div.grid__item.one-half.cf.mbh
-                        input(type="text" class="input__text  required  full  js-first-focus" placeholder="Enter your name")
-                        input(type="email" class="input__text  required  full" placeholder="Enter your email address")
-                        textarea(placeholder="Enter you message" class="input__textarea  full" cols="40" rows="10")
-                        input(type="submit" class="btn btn--small btn--full btn--orange") Send
+                        form(action="/contact", name="contactform", id="contactform", method="post")
+                            input(type="text" name="name" class="input__text  required  full  js-first-focus" placeholder="Enter your name")
+                            input(type="email" name="email" class="input__text  required  full" placeholder="Enter your email address")
+                            textarea(placeholder="Enter you message" name="message" class="input__textarea  full" cols="40" rows="10")
+                            input(type="submit" name="submit" class="btn btn--small btn--full btn--orange") Send
+                            if(typeof msg !== 'undefined')
+                              if(!!err)
+                                div(class='msgbox err') #{msg}
+                              else
+                                div(class='msgbox success') #{msg}
 
-                    div.one-whole.cf
+                    div.grid__item.one-whole.cf
                         div#map.contact-map

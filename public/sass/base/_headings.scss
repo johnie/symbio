@@ -30,6 +30,10 @@
     line-height: 1.5;
     margin-bottom: 30px;
     @extend .cf;
+
+    @media (max-width: $phone-size) {
+        font-size: 1.1em;
+    }
 }
 
 .section-col__title{

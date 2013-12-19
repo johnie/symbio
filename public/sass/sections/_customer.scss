@@ -1,0 +1,22 @@
+@include keyframe(fast) {
+    0%   {  @include vendor(transform, rotate(-80deg)); }
+    20%  {  @include vendor(transform, rotate(-80deg)); }
+    35%  {  @include vendor(transform, rotate(80deg));  }
+    48%  {  @include vendor(transform, rotate(80deg));  }
+    51%  {  @include vendor(transform, rotate(72deg));  }
+    53%  {  @include vendor(transform, rotate(84deg));  }
+    55%  {  @include vendor(transform, rotate(66deg));  }
+    58%  {  @include vendor(transform, rotate(84deg));  }
+    81%  {  @include vendor(transform, rotate(85deg));  }
+    100% {  @include vendor(transform, rotate(-80deg)); }
+}
+
+.speedometer{
+    margin: 0 auto;
+    display: block;
+}
+
+#ticker{
+    @include vendor(transform-origin, center 150px);
+    @include vendor(animation, fast 6s infinite ease);
+}
