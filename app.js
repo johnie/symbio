@@ -29,21 +29,6 @@ app.get("/", function(req, res) {
 app.post("/contact", function(req, res) {
     var smtpTransport, mailOptions;
 
-        // send mail with defined transport object
-    smtpTransport.sendMail(mailOptions, function(error, response){
-        mailOptions.subject = subject;
-        mailOptions.text = text;
-        mailOptions.html = html;
-
-        if(error){
-            console.log(error);
-            alert(error);
-        }else{
-            console.log("Message sent: " + response.message);
-            alert("Message sent: " + response.message);
-        }
-    });
-
     smtpTransport = nodemailer.createTransport("SMTP",{
         host : 'smtp.mandrillapp.com',
         port : 587,
@@ -53,15 +38,34 @@ app.post("/contact", function(req, res) {
         }
     });
 
+    console.log('req.body -> ' + req.body.name + ' <' + req.body.email + '>');
+
     // setup e-mail data with unicode symbols
     mailOptions = {
-        from: req.body.name + ' &lt;' + req.body.email + '&gt;', // sender address
+        from: req.body.name + ' <' + req.body.email + '>', // sender address
         to: 'johniehjelm@me.com',
-        text: req.body.message // list of receivers separate with dot
-        // subject: "United Spaces - new catering order", // Subject line
-        // text: "New catering order. Please go to reservation system to view the catering orders.", // plaintext body
-        // html: "<b>New catering order</b><br/><br/><p>Please go to reservation system to view the catering orders.</p>" // html body
+        text: req.body.message, // list of receivers separate with dot
+        subject: "Symbio Sweden - Start a Project", // Subject line
+        text: "Here is something you know ... like content or whatever.", // plaintext body
+        html: "<b>Here is something</b> ...<br/><br/><p>like content you know ...</p>" // html body
     }
+
+        // send mail with defined transport object
+    smtpTransport.sendMail(mailOptions, function(error, response){
+//        mailOptions.subject = subject;
+//        mailOptions.text = text;
+//        mailOptions.html = html;
+
+        if(error){
+            console.log(error);
+//            alert(error);
+        }else{
+            console.log("Message sent: " + response.message);
+//            alert("Message sent: " + response.message);
+        }
+	res.send(200);
+    });
+
 });
 
 app.use(function(req, res, next){
