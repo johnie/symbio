@@ -88,7 +88,7 @@ section(class="contact-section" id="contact")
                                 span.entypo-linkedin
 
                     div.grid__item.one-half.cf.mbh
-                        form(action="/contact", name="contactform", id="contactform", method="post")
+                        form(name="contactform", id="contactform", method="post", action="/contact")
                             input(type="text" name="name" class="input__text  required  full  js-first-focus" placeholder="Enter your name")
                             input(type="email" name="email" class="input__text  required  full" placeholder="Enter your email address")
                             textarea(placeholder="Enter you message" name="message" class="input__textarea  full" cols="40" rows="10")

@@ -15,7 +15,6 @@ a{
 
 .sections{
     width: 100%;
-    min-height: 600px;
     position: relative;
     z-index: -1;
 }
@@ -28,9 +27,20 @@ a{
     display: none;
 }
 
+.logo-wrap{
+    @media (max-width: $phone-size) {
+        width: 100% !important;
+    }
+}
+
 .logo{
     width: 200px;
     height: 50px;
+
+    @media (max-width: $phone-size) {
+        display: block;
+        margin: 0 auto;
+    }
 }
 
 .small-logo{
@@ -41,6 +51,7 @@ a{
 
 .main{
     position: relative;
+    padding: 20px 0;
 }
 
 .navigation{
@@ -65,9 +76,15 @@ a{
     position: relative;
     z-index: 101;
     top: 15px;
+    @extend .cf;
     
     li{
          padding-left: $base-spacing-unit*1.5;
+
+        @media (max-width: 900px) {
+            font-size: 12px;
+            padding-left: $base-spacing-unit;
+        }
     }
 
     a{
@@ -109,14 +126,117 @@ a{
                 opacity: 0;
             }
         }
-     }
+    }
+
+    @media (max-width: $tablet-size) {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        display: none;
+        width: 100%;
+    
+        &:after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+
+        li{
+            display: block;
+            padding-left: 0;
+            text-align: center;
+            width: 100%;
+            background: rgba(60, 70, 77, 0.9);
+            font-size: 16px;
+
+            &:last-child{
+                padding-bottom: 10px;
+            }
+
+            a{
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                color: #FFF;
+
+                &.active{
+                    color: $brand-color;
+                }
+            }
+        }
+    }
+}
+
+.menu-btn{
+  top: 14px;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: none;
+
+  @media (max-width: $tablet-size) {
+    display: block;
+  }
+
+  span{
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    text-indent: -9999px;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -1px;   
+
+    &:before, &:after{
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background-color: #fff;
+      display: block;
+      position: absolute; 
+      content: "";
+      @include vendor(transition, all 0.3s);
+    }
+    
+    &:before{
+      @include vendor(transform, translateY(-250%));
+    }
+    
+    &:after{
+      @include vendor(transform, translateY(250%));
+    }
+  }
+  
+  &.open{
+    span{
+      background-color: transparent;
+      
+      &:before{
+        @include vendor(transform, translateY(0) rotate(45deg));
+      }
+    
+      &:after{
+        @include vendor(transform, translateY(0) rotate(-45deg));
+      } 
+    }
+  }
 }
 
 .inner{
     padding: 80px 0;
 
         @media (max-width: $phone-size) {
-            padding: 80px 0 40px;
+            padding: 60px 0 0;
         }
 }
 

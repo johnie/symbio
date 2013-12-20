@@ -111,6 +111,38 @@ function jumpNext() {
 
 jumpNext();
 
+function responsiveNav() {
+    $(".menu-btn").click(function(){
+        $(this).toggleClass("open");
+        $(".main-menu").toggle('fast');
+    });
+}
+
+responsiveNav();
+
+function contactForm() {
+    $("#contactform").submit(function(){
+        var payload = $(this).serializeObject();
+        $.ajax({
+            type: 'POST',
+            url: '/contact',
+            contentType: 'application/json',
+            dataType: 'json',
+            data: JSON.stringify(payload),
+
+            success: function() {
+                alert("Yaay!");
+            }, error: function() {
+                alert("You fucked up!");
+            }
+        });
+        // disable default behaviour
+        return false;
+    });
+}
+
+contactForm();
+
 // Various functions and features
 $(function(){
     $(".first-nav").find("li:first a").addClass("js-current");

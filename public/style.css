@@ -713,7 +713,7 @@ fieldset {
  * and over in your markup.
  */
 /* line 104, sass/generic/_resets.scss */
-.cf:after, .section-subtitle:after, .nav:after, .grid:after, .header:after, .form-check:after, .navigation:after {
+.cf:after, .section-subtitle:after, .nav:after, .grid:after, .header:after, .form-check:after, .navigation:after, .main-menu:after {
   content: "";
   display: table;
   clear: both;
@@ -1646,14 +1646,33 @@ html.flexbox {
 .main-section.js-bg-scroll {
   background-attachment: scroll !important;
 }
+@media (max-width: 600px) {
+  /* line 1, sass/sections/_header.scss */
+  .main-section {
+    padding: 30px 0;
+  }
+}
 
-/* line 14, sass/sections/_header.scss */
+/* line 18, sass/sections/_header.scss */
 .header {
   top: 10%;
   position: relative;
 }
+@media (max-width: 600px) {
+  /* line 18, sass/sections/_header.scss */
+  .header {
+    top: 0;
+  }
+}
 
-/* line 20, sass/sections/_header.scss */
+@media (max-width: 600px) {
+  /* line 28, sass/sections/_header.scss */
+  .first-nav-wrap {
+    display: none;
+  }
+}
+
+/* line 34, sass/sections/_header.scss */
 .first-nav {
   height: 54px;
   text-transform: uppercase;
@@ -1661,12 +1680,16 @@ html.flexbox {
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
 }
-/* line 27, sass/sections/_header.scss */
+/* line 41, sass/sections/_header.scss */
 .first-nav li {
   padding-left: 30px;
   padding-top: 17px;
 }
-/* line 32, sass/sections/_header.scss */
+/* line 45, sass/sections/_header.scss */
+.first-nav li.res-show {
+  display: none;
+}
+/* line 50, sass/sections/_header.scss */
 .first-nav a {
   color: #eee;
   line-height: 1;
@@ -1678,7 +1701,7 @@ html.flexbox {
   transition: color 0.25s ease-out;
   position: relative;
 }
-/* line 39, sass/sections/_header.scss */
+/* line 57, sass/sections/_header.scss */
 .first-nav a::before {
   position: absolute;
   top: 100%;
@@ -1695,17 +1718,17 @@ html.flexbox {
   transform: translateX(-50%);
   pointer-events: none;
 }
-/* line 56, sass/sections/_header.scss */
+/* line 74, sass/sections/_header.scss */
 .first-nav a:hover {
   color: #FFF;
 }
-/* line 62, sass/sections/_header.scss */
+/* line 80, sass/sections/_header.scss */
 .first-nav a:hover::before, .first-nav a:focus::before, .first-nav a.js-current::before {
   color: #fe8500;
   text-shadow: 10px 0 #fe8500, -10px 0 #fe8500;
 }
 
-/* line 69, sass/sections/_header.scss */
+/* line 87, sass/sections/_header.scss */
 .site-caption {
   width: 800px;
   color: #FFF;
@@ -1721,20 +1744,29 @@ html.flexbox {
   transform: translate(-50%, -40%);
 }
 @media (max-width: 800px) {
-  /* line 69, sass/sections/_header.scss */
+  /* line 87, sass/sections/_header.scss */
   .site-caption {
     width: 600px;
   }
 }
 @media (max-width: 600px) {
-  /* line 69, sass/sections/_header.scss */
+  /* line 87, sass/sections/_header.scss */
   .site-caption {
     width: 100%;
     padding: 0px 10px;
+    padding-top: 30px;
+    position: relative;
+    top: 0;
+    left: 0;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 }
 
-/* line 89, sass/sections/_header.scss */
+/* line 112, sass/sections/_header.scss */
 .site-caption--slogan {
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -1742,25 +1774,25 @@ html.flexbox {
   font-size: 3.5em;
   margin-bottom: 30px;
 }
-/* line 96, sass/sections/_header.scss */
+/* line 119, sass/sections/_header.scss */
 .site-caption--slogan span {
   display: block;
   color: #fe8500;
 }
 @media (max-width: 800px) {
-  /* line 89, sass/sections/_header.scss */
+  /* line 112, sass/sections/_header.scss */
   .site-caption--slogan {
     font-size: 3em;
   }
 }
 @media (max-width: 600px) {
-  /* line 89, sass/sections/_header.scss */
+  /* line 112, sass/sections/_header.scss */
   .site-caption--slogan {
-    font-size: 2em;
+    font-size: 1.5em;
   }
 }
 
-/* line 110, sass/sections/_header.scss */
+/* line 133, sass/sections/_header.scss */
 .site-caption--disclaimer {
   font: 24px "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
   text-transform: none;
@@ -1771,21 +1803,21 @@ html.flexbox {
   color: #FFF;
 }
 @media (max-width: 800px) {
-  /* line 110, sass/sections/_header.scss */
+  /* line 133, sass/sections/_header.scss */
   .site-caption--disclaimer {
     font-size: 20px;
     font-weight: 400;
   }
 }
 @media (max-width: 600px) {
-  /* line 110, sass/sections/_header.scss */
+  /* line 133, sass/sections/_header.scss */
   .site-caption--disclaimer {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
   }
 }
 
-/* line 130, sass/sections/_header.scss */
+/* line 153, sass/sections/_header.scss */
 .trace {
   position: absolute;
   width: 2px;
@@ -1799,7 +1831,13 @@ html.flexbox {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
 }
-/* line 139, sass/sections/_header.scss */
+@media (max-width: 600px) {
+  /* line 153, sass/sections/_header.scss */
+  .trace {
+    display: none;
+  }
+}
+/* line 166, sass/sections/_header.scss */
 .trace:before {
   content: '';
   display: block;
@@ -3427,18 +3465,24 @@ html.flexbox {
 .btn--small {
   font-size: 1.2em;
 }
+@media (max-width: 600px) {
+  /* line 63, sass/objects/_buttons.scss */
+  .btn--small {
+    font-size: 1em;
+  }
+}
 
-/* line 67, sass/objects/_buttons.scss */
+/* line 71, sass/objects/_buttons.scss */
 .btn--medium {
   font-size: 1.4em;
 }
 
-/* line 71, sass/objects/_buttons.scss */
+/* line 75, sass/objects/_buttons.scss */
 .btn--large {
   font-size: 1.6em;
 }
 
-/* line 75, sass/objects/_buttons.scss */
+/* line 79, sass/objects/_buttons.scss */
 .btn--plus:before {
   content: "+ ";
 }
@@ -3448,7 +3492,7 @@ html.flexbox {
  *
  * 1. Remove padding so that widths and paddings don’t conflict.
  */
-/* line 84, sass/objects/_buttons.scss */
+/* line 88, sass/objects/_buttons.scss */
 .btn--full {
   width: 100%;
   padding-right: 0;
@@ -3464,17 +3508,17 @@ html.flexbox {
 /**
  * Button font-size modifiers.
  */
-/* line 101, sass/objects/_buttons.scss */
+/* line 105, sass/objects/_buttons.scss */
 .btn--alpha {
   font-size: 3rem;
 }
 
-/* line 105, sass/objects/_buttons.scss */
+/* line 109, sass/objects/_buttons.scss */
 .btn--beta {
   font-size: 2rem;
 }
 
-/* line 109, sass/objects/_buttons.scss */
+/* line 113, sass/objects/_buttons.scss */
 .btn--gamma {
   font-size: 1rem;
 }
@@ -3482,7 +3526,7 @@ html.flexbox {
 /**
  * Make the button inherit sizing from its parent.
  */
-/* line 116, sass/objects/_buttons.scss */
+/* line 120, sass/objects/_buttons.scss */
 .btn--natural {
   vertical-align: baseline;
   font-size: inherit;
@@ -3500,7 +3544,7 @@ html.flexbox {
 /**
  * Positive actions; e.g. sign in, purchase, submit, etc.
  */
-/* line 141, sass/objects/_buttons.scss */
+/* line 145, sass/objects/_buttons.scss */
 .btn--positive {
   background-color: #4A993E;
   color: #fff;
@@ -3509,7 +3553,7 @@ html.flexbox {
 /**
  * Negative actions; e.g. close account, delete photo, remove friend, etc.
  */
-/* line 149, sass/objects/_buttons.scss */
+/* line 153, sass/objects/_buttons.scss */
 .btn--negative {
   background-color: #b33630;
   color: #fff;
@@ -3520,7 +3564,7 @@ html.flexbox {
  * 
  * 1. Make the button look like normal text when hovered.
  */
-/* line 162, sass/objects/_buttons.scss */
+/* line 166, sass/objects/_buttons.scss */
 .btn--inactive,
 .btn--inactive:hover,
 .btn--inactive:active,
@@ -3539,46 +3583,46 @@ html.flexbox {
  *
  * 1. Use an overly-large number to ensure completely rounded, pill-like ends.
  */
-/* line 181, sass/objects/_buttons.scss */
+/* line 185, sass/objects/_buttons.scss */
 .btn--white {
   background: #FFF;
   color: #21262c;
 }
-/* line 185, sass/objects/_buttons.scss */
+/* line 189, sass/objects/_buttons.scss */
 .btn--white:hover {
   background: #fe8500;
   color: #FFF;
 }
 
-/* line 191, sass/objects/_buttons.scss */
+/* line 195, sass/objects/_buttons.scss */
 .btn--orange {
   background: #fe8500;
   color: #FFF;
 }
-/* line 195, sass/objects/_buttons.scss */
+/* line 199, sass/objects/_buttons.scss */
 .btn--orange:hover {
   background: #ff9828;
   color: #FFF;
 }
 
-/* line 201, sass/objects/_buttons.scss */
+/* line 205, sass/objects/_buttons.scss */
 .btn--black {
   background: #21262c;
   color: #FFF;
 }
-/* line 205, sass/objects/_buttons.scss */
+/* line 209, sass/objects/_buttons.scss */
 .btn--black:hover {
   background: #323a43;
   color: #FFF;
 }
 
-/* line 211, sass/objects/_buttons.scss */
+/* line 215, sass/objects/_buttons.scss */
 .btn--soft {
   border-radius: 200px;
   /* [1] */
 }
 
-/* line 215, sass/objects/_buttons.scss */
+/* line 219, sass/objects/_buttons.scss */
 .btn--hard {
   border-radius: 0;
 }
@@ -3857,12 +3901,11 @@ a:hover {
 /* line 16, sass/base/_main.scss */
 .sections {
   width: 100%;
-  min-height: 600px;
   position: relative;
   z-index: -1;
 }
 
-/* line 23, sass/base/_main.scss */
+/* line 22, sass/base/_main.scss */
 .site-name {
   color: #FFF;
   font-weight: normal;
@@ -3871,25 +3914,40 @@ a:hover {
   display: none;
 }
 
-/* line 31, sass/base/_main.scss */
+@media (max-width: 600px) {
+  /* line 30, sass/base/_main.scss */
+  .logo-wrap {
+    width: 100% !important;
+  }
+}
+
+/* line 36, sass/base/_main.scss */
 .logo {
   width: 200px;
   height: 50px;
 }
+@media (max-width: 600px) {
+  /* line 36, sass/base/_main.scss */
+  .logo {
+    display: block;
+    margin: 0 auto;
+  }
+}
 
-/* line 36, sass/base/_main.scss */
+/* line 46, sass/base/_main.scss */
 .small-logo {
   width: 120px;
   position: relative;
   top: 10px;
 }
 
-/* line 42, sass/base/_main.scss */
+/* line 52, sass/base/_main.scss */
 .main {
   position: relative;
+  padding: 20px 0;
 }
 
-/* line 46, sass/base/_main.scss */
+/* line 57, sass/base/_main.scss */
 .navigation {
   position: absolute;
   top: 0;
@@ -3900,12 +3958,12 @@ a:hover {
   z-index: 100;
 }
 
-/* line 57, sass/base/_main.scss */
+/* line 68, sass/base/_main.scss */
 .fixed-pos {
   position: fixed;
 }
 
-/* line 61, sass/base/_main.scss */
+/* line 72, sass/base/_main.scss */
 .main-menu {
   font-weight: 400;
   font-size: 14px;
@@ -3914,11 +3972,18 @@ a:hover {
   z-index: 101;
   top: 15px;
 }
-/* line 69, sass/base/_main.scss */
+/* line 81, sass/base/_main.scss */
 .main-menu li {
   padding-left: 30px;
 }
-/* line 73, sass/base/_main.scss */
+@media (max-width: 900px) {
+  /* line 81, sass/base/_main.scss */
+  .main-menu li {
+    font-size: 12px;
+    padding-left: 20px;
+  }
+}
+/* line 90, sass/base/_main.scss */
 .main-menu a {
   color: #21262c;
   text-decoration: none;
@@ -3932,7 +3997,7 @@ a:hover {
   -o-transition: color 0.25s ease-out;
   transition: color 0.25s ease-out;
 }
-/* line 82, sass/base/_main.scss */
+/* line 99, sass/base/_main.scss */
 .main-menu a::before {
   color: #fff;
   content: attr(data-hover);
@@ -3947,52 +4012,178 @@ a:hover {
   transition: transform 0.3s, opacity 0.3s;
   pointer-events: none;
 }
-/* line 98, sass/base/_main.scss */
+/* line 115, sass/base/_main.scss */
 .main-menu a:hover::before, .main-menu a:focus::before {
   -webkit-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
   -moz-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
   transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
   opacity: 1;
 }
-/* line 105, sass/base/_main.scss */
+/* line 122, sass/base/_main.scss */
 .main-menu a.active {
   color: #FFF;
 }
-/* line 108, sass/base/_main.scss */
+/* line 125, sass/base/_main.scss */
 .main-menu a.active::before {
   opacity: 0;
 }
+@media (max-width: 800px) {
+  /* line 72, sass/base/_main.scss */
+  .main-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    width: 100%;
+  }
+  /* line 138, sass/base/_main.scss */
+  .main-menu:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  /* line 144, sass/base/_main.scss */
+  .main-menu li {
+    display: block;
+    padding-left: 0;
+    text-align: center;
+    width: 100%;
+    background: rgba(60, 70, 77, 0.9);
+    font-size: 16px;
+  }
+  /* line 152, sass/base/_main.scss */
+  .main-menu li:last-child {
+    padding-bottom: 10px;
+  }
+  /* line 156, sass/base/_main.scss */
+  .main-menu li a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    color: #FFF;
+  }
+  /* line 162, sass/base/_main.scss */
+  .main-menu li a.active {
+    color: #fe8500;
+  }
+}
 
-/* line 115, sass/base/_main.scss */
+/* line 170, sass/base/_main.scss */
+.menu-btn {
+  top: 14px;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: none;
+}
+@media (max-width: 800px) {
+  /* line 170, sass/base/_main.scss */
+  .menu-btn {
+    display: block;
+  }
+}
+/* line 188, sass/base/_main.scss */
+.menu-btn span {
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  text-indent: -9999px;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+}
+/* line 199, sass/base/_main.scss */
+.menu-btn span:before, .menu-btn span:after {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #fff;
+  display: block;
+  position: absolute;
+  content: "";
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 211, sass/base/_main.scss */
+.menu-btn span:before {
+  -webkit-transform: translateY(-250%);
+  -moz-transform: translateY(-250%);
+  -ms-transform: translateY(-250%);
+  -o-transform: translateY(-250%);
+  transform: translateY(-250%);
+}
+/* line 215, sass/base/_main.scss */
+.menu-btn span:after {
+  -webkit-transform: translateY(250%);
+  -moz-transform: translateY(250%);
+  -ms-transform: translateY(250%);
+  -o-transform: translateY(250%);
+  transform: translateY(250%);
+}
+/* line 221, sass/base/_main.scss */
+.menu-btn.open span {
+  background-color: transparent;
+}
+/* line 224, sass/base/_main.scss */
+.menu-btn.open span:before {
+  -webkit-transform: translateY(0) rotate(45deg);
+  -moz-transform: translateY(0) rotate(45deg);
+  -ms-transform: translateY(0) rotate(45deg);
+  -o-transform: translateY(0) rotate(45deg);
+  transform: translateY(0) rotate(45deg);
+}
+/* line 228, sass/base/_main.scss */
+.menu-btn.open span:after {
+  -webkit-transform: translateY(0) rotate(-45deg);
+  -moz-transform: translateY(0) rotate(-45deg);
+  -ms-transform: translateY(0) rotate(-45deg);
+  -o-transform: translateY(0) rotate(-45deg);
+  transform: translateY(0) rotate(-45deg);
+}
+
+/* line 235, sass/base/_main.scss */
 .inner {
   padding: 80px 0;
 }
 @media (max-width: 600px) {
-  /* line 115, sass/base/_main.scss */
+  /* line 235, sass/base/_main.scss */
   .inner {
-    padding: 80px 0 40px;
+    padding: 60px 0 0;
   }
 }
 
-/* line 123, sass/base/_main.scss */
+/* line 243, sass/base/_main.scss */
 .section-cols {
   margin-bottom: 40px;
 }
-/* line 125, sass/base/_main.scss */
+/* line 245, sass/base/_main.scss */
 .section-cols:last-child {
   margin-bottom: 0;
 }
 
-/* line 130, sass/base/_main.scss */
+/* line 250, sass/base/_main.scss */
 .section-cols__col {
   margin-bottom: 20px;
 }
-/* line 132, sass/base/_main.scss */
+/* line 252, sass/base/_main.scss */
 .section-cols__col:last-child {
   margin-bottom: 0;
 }
 
-/* line 137, sass/base/_main.scss */
+/* line 257, sass/base/_main.scss */
 .analytics {
   display: block;
   margin: 0 auto;

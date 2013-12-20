@@ -44,10 +44,8 @@ app.post("/contact", function(req, res) {
     mailOptions = {
         from: req.body.name + ' <' + req.body.email + '>', // sender address
         to: 'johniehjelm@me.com',
-        text: req.body.message, // list of receivers separate with dot
-        subject: "Symbio Sweden - Start a Project", // Subject line
-        text: "Here is something you know ... like content or whatever.", // plaintext body
-        html: "<b>Here is something</b> ...<br/><br/><p>like content you know ...</p>" // html body
+        subject: "Symbio Sweden - Contact", // Subject line
+        html: req.body.message + "<br /><br /><b>Name:</b><br />" + req.body.name + "<br /><b>Email:</b><br />" + req.body.email
     }
 
         // send mail with defined transport object
@@ -58,14 +56,14 @@ app.post("/contact", function(req, res) {
 
         if(error){
             console.log(error);
-//            alert(error);
+            alert(error);
         }else{
             console.log("Message sent: " + response.message);
-//            alert("Message sent: " + response.message);
+            alert("Message sent: " + response.message);
         }
-	res.send(200);
-    });
 
+	res.render("home");
+    });
 });
 
 app.use(function(req, res, next){
@@ -73,5 +71,5 @@ app.use(function(req, res, next){
 });
 
 http.createServer(app).listen(app.get('port'), function(){
-  console.log('Express server listening on port ' + app.get('port'));
+  console.log('Symbio is running on http://dev:' + app.get('port'));
 });
