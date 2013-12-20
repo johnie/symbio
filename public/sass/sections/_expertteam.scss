@@ -51,6 +51,7 @@
     max-width: 370px;
     margin: 0 auto;
     position: relative;
+    top: 40px;
 
         &:before{
             position: absolute;
@@ -96,7 +97,7 @@
         }
 
         @media (max-width: $phone-size) {
-            margin-bottom: 30px;
+            display: none;
         }
 }
 

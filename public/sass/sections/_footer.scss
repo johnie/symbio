@@ -8,6 +8,16 @@
         font-family: $second-fontstack;
         -webkit-font-smoothing: antialiased;
     }
+
+    @media (max-width: $phone-size) {
+        padding-bottom: 40px;
+        text-align: center;
+
+        p{
+            font-size: 13px;
+            padding-top: 20px;
+        }
+    }
 }
 
 .social-links{
@@ -28,10 +38,22 @@
             color: #ccc;
         }
 
+        &:last-child{
+            margin-right: 0;
+        }
+
         &:not(:last-child):after {
             content: '•';
             padding-left: $base-spacing-unit;
             color: $brand-color;
+        }
+
+        @media (max-width: $phone-size) {
+            font-size: 12px;
+            margin-right: $base-spacing-unit/2;
+            &:not(:last-child):after{
+                padding-left: $base-spacing-unit/2;
+            }
         }
     }
 }
