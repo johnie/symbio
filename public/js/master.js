@@ -96,6 +96,13 @@ function startAProject() {
     
     });
 
+    new CustomSelect("select", {
+        hiddenSelectClass : "custom-select__hidden",
+        customSelectClass : "custom-select full",
+        listSelectClass : "custom-select__list",
+        activeListClass : "custom-select__active",
+        selectedOptionClass : "custom-select__selected"
+    });
 }
 
 startAProject();
@@ -112,9 +119,10 @@ function jumpNext() {
 jumpNext();
 
 function responsiveNav() {
-    $(".menu-btn").click(function(){
+    $(".menu-btn").on("touchstart click", function(e){
+        e.stopPropagation(); e.preventDefault();
         $(this).toggleClass("open");
-        $(".main-menu").toggle('fast');
+        $(".main-menu").toggleClass('visibility');
     });
 }
 
@@ -150,13 +158,5 @@ $(function(){
     if (Modernizr.touch) {
         $(".main-section").addClass("js-bg-scroll");
     }
-
-    new CustomSelect("select", {
-		hiddenSelectClass : "custom-select__hidden",
-		customSelectClass : "custom-select full",
-        listSelectClass : "custom-select__list",
-		activeListClass : "custom-select__active",
-		selectedOptionClass : "custom-select__selected"
-	});
 
 });

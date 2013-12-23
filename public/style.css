@@ -4100,8 +4100,12 @@ a:hover {
     color: #fe8500;
   }
 }
+/* line 168, sass/base/_main.scss */
+.main-menu.visibility {
+  display: block;
+}
 
-/* line 169, sass/base/_main.scss */
+/* line 173, sass/base/_main.scss */
 .menu-btn {
   top: 14px;
   width: 22px;
@@ -4117,12 +4121,12 @@ a:hover {
   display: none;
 }
 @media (max-width: 800px) {
-  /* line 169, sass/base/_main.scss */
+  /* line 173, sass/base/_main.scss */
   .menu-btn {
     display: block;
   }
 }
-/* line 187, sass/base/_main.scss */
+/* line 191, sass/base/_main.scss */
 .menu-btn span {
   width: 100%;
   height: 2px;
@@ -4134,7 +4138,7 @@ a:hover {
   left: 0;
   margin-top: -1px;
 }
-/* line 198, sass/base/_main.scss */
+/* line 202, sass/base/_main.scss */
 .menu-btn span:before, .menu-btn span:after {
   width: 100%;
   height: 100%;
@@ -4150,7 +4154,7 @@ a:hover {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 210, sass/base/_main.scss */
+/* line 214, sass/base/_main.scss */
 .menu-btn span:before {
   -webkit-transform: translateY(-250%);
   -moz-transform: translateY(-250%);
@@ -4158,7 +4162,7 @@ a:hover {
   -o-transform: translateY(-250%);
   transform: translateY(-250%);
 }
-/* line 214, sass/base/_main.scss */
+/* line 218, sass/base/_main.scss */
 .menu-btn span:after {
   -webkit-transform: translateY(250%);
   -moz-transform: translateY(250%);
@@ -4166,11 +4170,11 @@ a:hover {
   -o-transform: translateY(250%);
   transform: translateY(250%);
 }
-/* line 220, sass/base/_main.scss */
+/* line 224, sass/base/_main.scss */
 .menu-btn.open span {
   background-color: transparent;
 }
-/* line 223, sass/base/_main.scss */
+/* line 227, sass/base/_main.scss */
 .menu-btn.open span:before {
   -webkit-transform: translateY(0) rotate(45deg);
   -moz-transform: translateY(0) rotate(45deg);
@@ -4178,7 +4182,7 @@ a:hover {
   -o-transform: translateY(0) rotate(45deg);
   transform: translateY(0) rotate(45deg);
 }
-/* line 227, sass/base/_main.scss */
+/* line 231, sass/base/_main.scss */
 .menu-btn.open span:after {
   -webkit-transform: translateY(0) rotate(-45deg);
   -moz-transform: translateY(0) rotate(-45deg);
@@ -4187,38 +4191,59 @@ a:hover {
   transform: translateY(0) rotate(-45deg);
 }
 
-/* line 234, sass/base/_main.scss */
+/* line 238, sass/base/_main.scss */
 .inner {
   padding: 80px 0;
 }
 @media (max-width: 600px) {
-  /* line 234, sass/base/_main.scss */
+  /* line 238, sass/base/_main.scss */
   .inner {
     padding: 80px 0 20px;
   }
 }
 
-/* line 242, sass/base/_main.scss */
+/* line 246, sass/base/_main.scss */
 .section-cols {
   margin-bottom: 40px;
 }
-/* line 244, sass/base/_main.scss */
+/* line 248, sass/base/_main.scss */
 .section-cols:last-child {
   margin-bottom: 0;
 }
 
-/* line 249, sass/base/_main.scss */
+/* line 253, sass/base/_main.scss */
 .section-cols__col {
   margin-bottom: 20px;
 }
-/* line 251, sass/base/_main.scss */
+/* line 255, sass/base/_main.scss */
 .section-cols__col:last-child {
   margin-bottom: 0;
 }
 
-/* line 256, sass/base/_main.scss */
+/* line 260, sass/base/_main.scss */
 .analytics {
   display: block;
   margin: 0 auto;
   max-width: 100%;
+}
+
+/* line 266, sass/base/_main.scss */
+.company-logo {
+  position: relative;
+  width: 100%;
+  height: 85px;
+}
+/* line 271, sass/base/_main.scss */
+.company-logo img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
