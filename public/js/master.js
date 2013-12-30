@@ -153,10 +153,7 @@ contactForm();
 
 // Various functions and features
 $(function(){
-    $(".first-nav").find("li:first a").addClass("js-current");
-
     if (Modernizr.touch) {
         $(".main-section").addClass("js-bg-scroll");
     }
-
 });

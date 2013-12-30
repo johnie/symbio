@@ -1,5 +1,10 @@
 .form__more-info{
     font-family: $second-fontstack;
+    display: block;
+
+    .no-js &{
+        padding-top: 10px;
+    }
 }
 
 .input__text, .input__textarea{

@@ -125,6 +125,12 @@ a{
                 opacity: 0;
             }
         }
+
+        .no-js &{
+            &:hover{
+                color: #fff;
+            }
+        }
     }
 
     @media (max-width: $tablet-size) {
