@@ -56,13 +56,13 @@ app.post("/contact", function(req, res) {
 
         if(error){
             console.log(error);
-            alert(error);
+//            alert(error);
         }else{
             console.log("Message sent: " + response.message);
-            alert("Message sent: " + response.message);
+//            alert("Message sent: " + response.message);
         }
 
-	res.render("home");
+	res.send(200);
     });
 });
 
