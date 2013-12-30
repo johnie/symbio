@@ -1058,11 +1058,17 @@ fieldset {
   margin-left: -20px !important;
 }
 
+/* line 121, sass/generic/_helper.scss */
+.auto-size {
+  width: 100% !important;
+  height: auto !important;
+}
+
 /**
  * Add a help cursor to any element that gives the user extra information on
  * `:hover`.
  */
-/* line 126, sass/generic/_helper.scss */
+/* line 131, sass/generic/_helper.scss */
 .informative {
   cursor: help !important;
 }
@@ -1070,7 +1076,7 @@ fieldset {
 /**
  * Mute an object by reducing its opacity.
  */
-/* line 134, sass/generic/_helper.scss */
+/* line 139, sass/generic/_helper.scss */
 .muted {
   opacity: 0.5 !important;
   filter: alpha(opacity=50) !important;
@@ -1082,7 +1088,7 @@ fieldset {
    <p class=proceed><a href=#>Read more...</a></p>
  *
  */
-/* line 146, sass/generic/_helper.scss */
+/* line 151, sass/generic/_helper.scss */
 .proceed {
   text-align: right !important;
 }
@@ -1093,7 +1099,7 @@ fieldset {
    <a href=# class=go>Read more</a>
  *
  */
-/* line 157, sass/generic/_helper.scss */
+/* line 162, sass/generic/_helper.scss */
 .go:after {
   content: "\00A0" "\00BB" !important;
 }
@@ -1101,7 +1107,7 @@ fieldset {
 /**
  * Apply capital case to an element (usually a `strong`).
  */
-/* line 165, sass/generic/_helper.scss */
+/* line 170, sass/generic/_helper.scss */
 .caps {
   text-transform: uppercase !important;
 }
@@ -1110,7 +1116,7 @@ fieldset {
  * Hide content off-screen without resorting to `display:none;`, also provide
  * breakpoint specific hidden elements.
  */
-/* line 185, sass/generic/_helper.scss */
+/* line 190, sass/generic/_helper.scss */
 .accessibility,
 .visuallyhidden {
   border: 0 !important;
@@ -2687,8 +2693,9 @@ html.flexbox {
   max-width: 370px;
   margin: 0 auto;
   position: relative;
+  top: 40px;
 }
-/* line 55, sass/sections/_expertteam.scss */
+/* line 56, sass/sections/_expertteam.scss */
 .terminal:before {
   position: absolute;
   content: "symbio — bash — 370x200";
@@ -2702,7 +2709,7 @@ html.flexbox {
   color: #21262c;
   font-family: "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
 }
-/* line 69, sass/sections/_expertteam.scss */
+/* line 70, sass/sections/_expertteam.scss */
 .terminal p {
   color: #FFF;
   font-weight: normal;
@@ -2710,22 +2717,22 @@ html.flexbox {
   font-size: 18px;
   font-family: Consolas, monospace, Menlo, Monaco !important;
 }
-/* line 77, sass/sections/_expertteam.scss */
+/* line 78, sass/sections/_expertteam.scss */
 .terminal .path, .terminal .prompt {
   position: relative;
   top: -9px;
 }
-/* line 82, sass/sections/_expertteam.scss */
+/* line 83, sass/sections/_expertteam.scss */
 .terminal .path {
   color: #71cfee;
   padding-right: 5px;
 }
-/* line 87, sass/sections/_expertteam.scss */
+/* line 88, sass/sections/_expertteam.scss */
 .terminal .prompt {
   color: #d74d52;
   padding-right: 10px;
 }
-/* line 92, sass/sections/_expertteam.scss */
+/* line 93, sass/sections/_expertteam.scss */
 .terminal .command {
   display: inline-block;
   overflow: hidden;
@@ -2734,11 +2741,11 @@ html.flexbox {
 @media (max-width: 600px) {
   /* line 43, sass/sections/_expertteam.scss */
   .terminal {
-    margin-bottom: 30px;
+    display: none;
   }
 }
 
-/* line 103, sass/sections/_expertteam.scss */
+/* line 104, sass/sections/_expertteam.scss */
 .shell:nth-child(1) {
   -webkit-animation: show-shell 0.1s 2s alternate backwards;
   -moz-animation: show-shell 0.1s 2s alternate backwards;
@@ -2746,7 +2753,7 @@ html.flexbox {
   -o-animation: show-shell 0.1s 2s alternate backwards;
   animation: show-shell 0.1s 2s alternate backwards;
 }
-/* line 106, sass/sections/_expertteam.scss */
+/* line 107, sass/sections/_expertteam.scss */
 .shell:nth-child(1) .command {
   -webkit-animation: typing1 2s 2s steps(28, end);
   -moz-animation: typing1 2s 2s steps(28, end);
@@ -2755,7 +2762,7 @@ html.flexbox {
   animation: typing1 2s 2s steps(28, end);
 }
 
-/* line 111, sass/sections/_expertteam.scss */
+/* line 112, sass/sections/_expertteam.scss */
 .shell:nth-child(2) {
   -webkit-animation: show-shell 0.1s 5s alternate backwards;
   -moz-animation: show-shell 0.1s 5s alternate backwards;
@@ -2763,7 +2770,7 @@ html.flexbox {
   -o-animation: show-shell 0.1s 5s alternate backwards;
   animation: show-shell 0.1s 5s alternate backwards;
 }
-/* line 114, sass/sections/_expertteam.scss */
+/* line 115, sass/sections/_expertteam.scss */
 .shell:nth-child(2) .command {
   -webkit-animation: typing2 2s 5s steps(17, end);
   -moz-animation: typing2 2s 5s steps(17, end);
@@ -2772,7 +2779,7 @@ html.flexbox {
   animation: typing2 2s 5s steps(17, end);
 }
 
-/* line 119, sass/sections/_expertteam.scss */
+/* line 120, sass/sections/_expertteam.scss */
 .shell:nth-child(3) {
   -webkit-animation: show-shell 0.1s 8s alternate backwards;
   -moz-animation: show-shell 0.1s 8s alternate backwards;
@@ -2780,7 +2787,7 @@ html.flexbox {
   -o-animation: show-shell 0.1s 8s alternate backwards;
   animation: show-shell 0.1s 8s alternate backwards;
 }
-/* line 122, sass/sections/_expertteam.scss */
+/* line 123, sass/sections/_expertteam.scss */
 .shell:nth-child(3) .command {
   -webkit-animation: typing3 2s 8s steps(19, end);
   -moz-animation: typing3 2s 8s steps(19, end);
@@ -2789,7 +2796,7 @@ html.flexbox {
   animation: typing3 2s 8s steps(19, end);
 }
 
-/* line 127, sass/sections/_expertteam.scss */
+/* line 128, sass/sections/_expertteam.scss */
 .shell:nth-child(4) {
   -webkit-animation: show-shell 0.1s 11s alternate backwards;
   -moz-animation: show-shell 0.1s 11s alternate backwards;
@@ -2797,7 +2804,7 @@ html.flexbox {
   -o-animation: show-shell 0.1s 11s alternate backwards;
   animation: show-shell 0.1s 11s alternate backwards;
 }
-/* line 130, sass/sections/_expertteam.scss */
+/* line 131, sass/sections/_expertteam.scss */
 .shell:nth-child(4) .command {
   -webkit-animation: typing4 2s 11s steps(16, end);
   -moz-animation: typing4 2s 11s steps(16, end);
@@ -3298,13 +3305,25 @@ html.flexbox {
   font-family: "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+@media (max-width: 600px) {
+  /* line 1, sass/sections/_footer.scss */
+  .footer {
+    padding-bottom: 40px;
+    text-align: center;
+  }
+  /* line 16, sass/sections/_footer.scss */
+  .footer p {
+    font-size: 13px;
+    padding-top: 20px;
+  }
+}
 
-/* line 13, sass/sections/_footer.scss */
+/* line 23, sass/sections/_footer.scss */
 .social-links {
   display: block;
   padding: 10px 0 5px;
 }
-/* line 17, sass/sections/_footer.scss */
+/* line 27, sass/sections/_footer.scss */
 .social-links a {
   text-transform: uppercase;
   font-weight: 300;
@@ -3319,18 +3338,33 @@ html.flexbox {
   -o-transition: color 0.25s ease-out;
   transition: color 0.25s ease-out;
 }
-/* line 27, sass/sections/_footer.scss */
+/* line 37, sass/sections/_footer.scss */
 .social-links a:hover {
   color: #ccc;
 }
-/* line 31, sass/sections/_footer.scss */
+/* line 41, sass/sections/_footer.scss */
+.social-links a:last-child {
+  margin-right: 0;
+}
+/* line 45, sass/sections/_footer.scss */
 .social-links a:not(:last-child):after {
   content: '•';
   padding-left: 20px;
   color: #fe8500;
 }
+@media (max-width: 600px) {
+  /* line 27, sass/sections/_footer.scss */
+  .social-links a {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+  /* line 54, sass/sections/_footer.scss */
+  .social-links a:not(:last-child):after {
+    padding-left: 10px;
+  }
+}
 
-/* line 39, sass/sections/_footer.scss */
+/* line 61, sass/sections/_footer.scss */
 .love {
   font: 14px "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
   line-height: 1.5em;
@@ -3944,10 +3978,9 @@ a:hover {
 /* line 52, sass/base/_main.scss */
 .main {
   position: relative;
-  padding: 20px 0;
 }
 
-/* line 57, sass/base/_main.scss */
+/* line 56, sass/base/_main.scss */
 .navigation {
   position: absolute;
   top: 0;
@@ -3958,12 +3991,12 @@ a:hover {
   z-index: 100;
 }
 
-/* line 68, sass/base/_main.scss */
+/* line 67, sass/base/_main.scss */
 .fixed-pos {
   position: fixed;
 }
 
-/* line 72, sass/base/_main.scss */
+/* line 71, sass/base/_main.scss */
 .main-menu {
   font-weight: 400;
   font-size: 14px;
@@ -3972,18 +4005,18 @@ a:hover {
   z-index: 101;
   top: 15px;
 }
-/* line 81, sass/base/_main.scss */
+/* line 80, sass/base/_main.scss */
 .main-menu li {
   padding-left: 30px;
 }
 @media (max-width: 900px) {
-  /* line 81, sass/base/_main.scss */
+  /* line 80, sass/base/_main.scss */
   .main-menu li {
     font-size: 12px;
     padding-left: 20px;
   }
 }
-/* line 90, sass/base/_main.scss */
+/* line 89, sass/base/_main.scss */
 .main-menu a {
   color: #21262c;
   text-decoration: none;
@@ -3997,7 +4030,7 @@ a:hover {
   -o-transition: color 0.25s ease-out;
   transition: color 0.25s ease-out;
 }
-/* line 99, sass/base/_main.scss */
+/* line 98, sass/base/_main.scss */
 .main-menu a::before {
   color: #fff;
   content: attr(data-hover);
@@ -4012,23 +4045,23 @@ a:hover {
   transition: transform 0.3s, opacity 0.3s;
   pointer-events: none;
 }
-/* line 115, sass/base/_main.scss */
+/* line 114, sass/base/_main.scss */
 .main-menu a:hover::before, .main-menu a:focus::before {
   -webkit-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
   -moz-transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
   transform: scale(1) translateX(0px) translateY(0px) rotate(0deg);
   opacity: 1;
 }
-/* line 122, sass/base/_main.scss */
+/* line 121, sass/base/_main.scss */
 .main-menu a.active {
   color: #FFF;
 }
-/* line 125, sass/base/_main.scss */
+/* line 124, sass/base/_main.scss */
 .main-menu a.active::before {
   opacity: 0;
 }
 @media (max-width: 800px) {
-  /* line 72, sass/base/_main.scss */
+  /* line 71, sass/base/_main.scss */
   .main-menu {
     position: absolute;
     top: 100%;
@@ -4036,13 +4069,13 @@ a:hover {
     display: none;
     width: 100%;
   }
-  /* line 138, sass/base/_main.scss */
+  /* line 137, sass/base/_main.scss */
   .main-menu:after {
     content: "";
     display: table;
     clear: both;
   }
-  /* line 144, sass/base/_main.scss */
+  /* line 143, sass/base/_main.scss */
   .main-menu li {
     display: block;
     padding-left: 0;
@@ -4051,24 +4084,24 @@ a:hover {
     background: rgba(60, 70, 77, 0.9);
     font-size: 16px;
   }
-  /* line 152, sass/base/_main.scss */
+  /* line 151, sass/base/_main.scss */
   .main-menu li:last-child {
     padding-bottom: 10px;
   }
-  /* line 156, sass/base/_main.scss */
+  /* line 155, sass/base/_main.scss */
   .main-menu li a {
     display: block;
     height: 40px;
     line-height: 40px;
     color: #FFF;
   }
-  /* line 162, sass/base/_main.scss */
+  /* line 161, sass/base/_main.scss */
   .main-menu li a.active {
     color: #fe8500;
   }
 }
 
-/* line 170, sass/base/_main.scss */
+/* line 169, sass/base/_main.scss */
 .menu-btn {
   top: 14px;
   width: 22px;
@@ -4084,12 +4117,12 @@ a:hover {
   display: none;
 }
 @media (max-width: 800px) {
-  /* line 170, sass/base/_main.scss */
+  /* line 169, sass/base/_main.scss */
   .menu-btn {
     display: block;
   }
 }
-/* line 188, sass/base/_main.scss */
+/* line 187, sass/base/_main.scss */
 .menu-btn span {
   width: 100%;
   height: 2px;
@@ -4101,7 +4134,7 @@ a:hover {
   left: 0;
   margin-top: -1px;
 }
-/* line 199, sass/base/_main.scss */
+/* line 198, sass/base/_main.scss */
 .menu-btn span:before, .menu-btn span:after {
   width: 100%;
   height: 100%;
@@ -4117,7 +4150,7 @@ a:hover {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 211, sass/base/_main.scss */
+/* line 210, sass/base/_main.scss */
 .menu-btn span:before {
   -webkit-transform: translateY(-250%);
   -moz-transform: translateY(-250%);
@@ -4125,7 +4158,7 @@ a:hover {
   -o-transform: translateY(-250%);
   transform: translateY(-250%);
 }
-/* line 215, sass/base/_main.scss */
+/* line 214, sass/base/_main.scss */
 .menu-btn span:after {
   -webkit-transform: translateY(250%);
   -moz-transform: translateY(250%);
@@ -4133,11 +4166,11 @@ a:hover {
   -o-transform: translateY(250%);
   transform: translateY(250%);
 }
-/* line 221, sass/base/_main.scss */
+/* line 220, sass/base/_main.scss */
 .menu-btn.open span {
   background-color: transparent;
 }
-/* line 224, sass/base/_main.scss */
+/* line 223, sass/base/_main.scss */
 .menu-btn.open span:before {
   -webkit-transform: translateY(0) rotate(45deg);
   -moz-transform: translateY(0) rotate(45deg);
@@ -4145,7 +4178,7 @@ a:hover {
   -o-transform: translateY(0) rotate(45deg);
   transform: translateY(0) rotate(45deg);
 }
-/* line 228, sass/base/_main.scss */
+/* line 227, sass/base/_main.scss */
 .menu-btn.open span:after {
   -webkit-transform: translateY(0) rotate(-45deg);
   -moz-transform: translateY(0) rotate(-45deg);
@@ -4154,36 +4187,36 @@ a:hover {
   transform: translateY(0) rotate(-45deg);
 }
 
-/* line 235, sass/base/_main.scss */
+/* line 234, sass/base/_main.scss */
 .inner {
   padding: 80px 0;
 }
 @media (max-width: 600px) {
-  /* line 235, sass/base/_main.scss */
+  /* line 234, sass/base/_main.scss */
   .inner {
-    padding: 60px 0 0;
+    padding: 80px 0 20px;
   }
 }
 
-/* line 243, sass/base/_main.scss */
+/* line 242, sass/base/_main.scss */
 .section-cols {
   margin-bottom: 40px;
 }
-/* line 245, sass/base/_main.scss */
+/* line 244, sass/base/_main.scss */
 .section-cols:last-child {
   margin-bottom: 0;
 }
 
-/* line 250, sass/base/_main.scss */
+/* line 249, sass/base/_main.scss */
 .section-cols__col {
   margin-bottom: 20px;
 }
-/* line 252, sass/base/_main.scss */
+/* line 251, sass/base/_main.scss */
 .section-cols__col:last-child {
   margin-bottom: 0;
 }
 
-/* line 257, sass/base/_main.scss */
+/* line 256, sass/base/_main.scss */
 .analytics {
   display: block;
   margin: 0 auto;
