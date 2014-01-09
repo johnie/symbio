@@ -1,3 +1,10 @@
+/*------------------------------------* 
+     =BASE
+*------------------------------------*/
+
+/** 
+ * Small explaining text that only appear once.
+ */
 .form__more-info{
     font-family: $second-fontstack;
     display: block;
@@ -7,6 +14,9 @@
     }
 }
 
+/*
+ * Input field resets
+ */
 .input__text, .input__textarea{
     text-align: left;
     letter-spacing: 1px;
@@ -31,6 +41,15 @@
         background:transparent url('images/asterisk.png') 97.5% center no-repeat;
     }
 
+    &.parsley-error{
+        border-color: #C02932 !important;
+        @include vendor(box-shadow, 0 0 5px rgba(192, 41, 50, .5));
+    }
+
+    &.parsley-success{
+        border-color: #30AD63 !important;
+    }
+
         &:hover{
             border-color: #777;
         }
@@ -39,9 +58,16 @@
             border-color: $brand-color;
             outline: none;
         }
+
+        @media (max-width: $phone-size) {
+            padding: 10px 2.5%;
+            font-size: 16px;
+        }
 }
 
 .input__textarea{
+    @include vendor(appearance, none);
+
     &.required{
         background:transparent url('images/asterisk.png') 97.5% 20px no-repeat;
     }
@@ -184,4 +210,59 @@
         content:"✓";
         float: right;
     }
+}
+
+.message-box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.message-box__title{
+    display: block;
+    position: absolute;
+    text-align: center;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    @include vendor(transform, translate(-50%, -50%));
+    font-weight: normal;
+
+    span{
+        display: block;
+        font-size: 2em;
+        font-weight: bold;
+
+        .message-box--success &{
+            color: #30AD63;
+        }
+
+        .message-box--error &{
+            color: #C02932;
+        }
+    }
+}
+
+/*------------------------------------* 
+     =Validation 
+*------------------------------------*/
+/*
+ * Parsley.js validation styles 
+ */
+
+.parsley-error-list{
+    font-family: $second-fontstack;
+    font-size: 12px;
+    list-style: none;
+    background-color: #C02932;
+    color: #fff;
+    display: inline-block;
+    padding: 3px 5px;
+    @include vendor(border-radius, 4px);
+    margin-bottom: 10px;
+    position: relative;
+    top: -10px;
 }

@@ -3693,17 +3693,26 @@ html.flexbox {
   border-radius: 0;
 }
 
-/* line 1, sass/objects/_forms.scss */
+/*------------------------------------* 
+     =BASE
+*------------------------------------*/
+/** 
+ * Small explaining text that only appear once.
+ */
+/* line 8, sass/objects/_forms.scss */
 .form__more-info {
   font-family: "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
   display: block;
 }
-/* line 5, sass/objects/_forms.scss */
+/* line 12, sass/objects/_forms.scss */
 .no-js .form__more-info {
   padding-top: 10px;
 }
 
-/* line 10, sass/objects/_forms.scss */
+/*
+ * Input field resets
+ */
+/* line 20, sass/objects/_forms.scss */
 .input__text, .input__textarea {
   text-align: left;
   letter-spacing: 1px;
@@ -3728,30 +3737,58 @@ html.flexbox {
   transition: border-color 0.25s ease;
   color: #21262c;
 }
-/* line 26, sass/objects/_forms.scss */
+/* line 36, sass/objects/_forms.scss */
 .input__text.full, .input__textarea.full {
   width: 100%;
 }
-/* line 30, sass/objects/_forms.scss */
+/* line 40, sass/objects/_forms.scss */
 .input__text.required, .input__textarea.required {
   background: transparent url("images/asterisk.png") 97.5% center no-repeat;
 }
-/* line 34, sass/objects/_forms.scss */
+/* line 44, sass/objects/_forms.scss */
+.input__text.parsley-error, .input__textarea.parsley-error {
+  border-color: #C02932 !important;
+  -webkit-box-shadow: 0 0 5px rgba(192, 41, 50, 0.5);
+  -moz-box-shadow: 0 0 5px rgba(192, 41, 50, 0.5);
+  -ms-box-shadow: 0 0 5px rgba(192, 41, 50, 0.5);
+  -o-box-shadow: 0 0 5px rgba(192, 41, 50, 0.5);
+  box-shadow: 0 0 5px rgba(192, 41, 50, 0.5);
+}
+/* line 49, sass/objects/_forms.scss */
+.input__text.parsley-success, .input__textarea.parsley-success {
+  border-color: #30AD63 !important;
+}
+/* line 53, sass/objects/_forms.scss */
 .input__text:hover, .input__textarea:hover {
   border-color: #777;
 }
-/* line 38, sass/objects/_forms.scss */
+/* line 57, sass/objects/_forms.scss */
 .input__text:focus, .input__textarea:focus {
   border-color: #fe8500;
   outline: none;
 }
+@media (max-width: 600px) {
+  /* line 20, sass/objects/_forms.scss */
+  .input__text, .input__textarea {
+    padding: 10px 2.5%;
+    font-size: 16px;
+  }
+}
 
-/* line 45, sass/objects/_forms.scss */
+/* line 68, sass/objects/_forms.scss */
+.input__textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+/* line 71, sass/objects/_forms.scss */
 .input__textarea.required {
   background: transparent url("images/asterisk.png") 97.5% 20px no-repeat;
 }
 
-/* line 50, sass/objects/_forms.scss */
+/* line 76, sass/objects/_forms.scss */
 .form-check {
   position: relative;
   text-align: left;
@@ -3779,16 +3816,16 @@ html.flexbox {
   display: block;
   color: #A1A1A1;
 }
-/* line 70, sass/objects/_forms.scss */
+/* line 96, sass/objects/_forms.scss */
 .form-check.full {
   width: 100%;
 }
-/* line 74, sass/objects/_forms.scss */
+/* line 100, sass/objects/_forms.scss */
 .form-check:hover {
   border-color: #777;
 }
 
-/* line 79, sass/objects/_forms.scss */
+/* line 105, sass/objects/_forms.scss */
 .form-check__checkbox {
   position: absolute;
   top: 50%;
@@ -3800,13 +3837,13 @@ html.flexbox {
   transform: translateY(-50%);
 }
 
-/* line 86, sass/objects/_forms.scss */
+/* line 112, sass/objects/_forms.scss */
 .custom-select__hidden {
   position: absolute;
   top: -8000px;
 }
 
-/* line 91, sass/objects/_forms.scss */
+/* line 117, sass/objects/_forms.scss */
 .custom-select {
   text-align: left;
   letter-spacing: 1px;
@@ -3832,20 +3869,20 @@ html.flexbox {
   color: #A1A1A1;
   position: relative;
 }
-/* line 108, sass/objects/_forms.scss */
+/* line 134, sass/objects/_forms.scss */
 .custom-select.full {
   width: 100%;
 }
-/* line 112, sass/objects/_forms.scss */
+/* line 138, sass/objects/_forms.scss */
 .custom-select:hover {
   border-color: #777;
 }
-/* line 116, sass/objects/_forms.scss */
+/* line 142, sass/objects/_forms.scss */
 .custom-select:focus {
   border-color: #fe8500;
   outline: none;
 }
-/* line 121, sass/objects/_forms.scss */
+/* line 147, sass/objects/_forms.scss */
 .custom-select:after {
   position: absolute;
   right: 3%;
@@ -3865,7 +3902,7 @@ html.flexbox {
   transform: rotate(45deg);
 }
 
-/* line 137, sass/objects/_forms.scss */
+/* line 163, sass/objects/_forms.scss */
 .custom-select__list {
   width: 100%;
   padding: 5px 2.5%;
@@ -3911,18 +3948,18 @@ html.flexbox {
   font-family: "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
   font-weight: 300;
 }
-/* line 158, sass/objects/_forms.scss */
+/* line 184, sass/objects/_forms.scss */
 .custom-select__list li {
   display: block;
   width: 100%;
   cursor: pointer;
 }
-/* line 163, sass/objects/_forms.scss */
+/* line 189, sass/objects/_forms.scss */
 .custom-select__list li:hover {
   color: #fe8500;
 }
 
-/* line 169, sass/objects/_forms.scss */
+/* line 195, sass/objects/_forms.scss */
 .custom-select__active {
   opacity: 1;
   -webkit-transform: scale(1) translateY(55px);
@@ -3933,19 +3970,84 @@ html.flexbox {
   pointer-events: auto;
 }
 
-/* line 175, sass/objects/_forms.scss */
+/* line 201, sass/objects/_forms.scss */
 .custom-select__selected {
   font-weight: 600;
 }
-/* line 178, sass/objects/_forms.scss */
+/* line 204, sass/objects/_forms.scss */
 .custom-select__selected:hover {
   color: #21262c !important;
 }
-/* line 182, sass/objects/_forms.scss */
+/* line 208, sass/objects/_forms.scss */
 .custom-select__selected:after {
   display: inline-block;
   content: "✓";
   float: right;
+}
+
+/* line 215, sass/objects/_forms.scss */
+.message-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* line 224, sass/objects/_forms.scss */
+.message-box__title {
+  display: block;
+  position: absolute;
+  text-align: center;
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  font-weight: normal;
+}
+/* line 234, sass/objects/_forms.scss */
+.message-box__title span {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+}
+/* line 239, sass/objects/_forms.scss */
+.message-box--success .message-box__title span {
+  color: #30AD63;
+}
+/* line 243, sass/objects/_forms.scss */
+.message-box--error .message-box__title span {
+  color: #C02932;
+}
+
+/*------------------------------------* 
+     =Validation 
+*------------------------------------*/
+/*
+ * Parsley.js validation styles 
+ */
+/* line 256, sass/objects/_forms.scss */
+.parsley-error-list {
+  font-family: "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
+  font-size: 12px;
+  list-style: none;
+  background-color: #C02932;
+  color: #fff;
+  display: inline-block;
+  padding: 3px 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  position: relative;
+  top: -10px;
 }
 
 /* line 1, sass/base/_main.scss */

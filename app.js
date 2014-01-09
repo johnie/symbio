@@ -50,19 +50,87 @@ app.post("/contact", function(req, res) {
 
         // send mail with defined transport object
     smtpTransport.sendMail(mailOptions, function(error, response){
-//        mailOptions.subject = subject;
-//        mailOptions.text = text;
-//        mailOptions.html = html;
 
-        if(error){
-            console.log(error);
-//            alert(error);
-        }else{
-            console.log("Message sent: " + response.message);
-//            alert("Message sent: " + response.message);
-        }
+    if(error){
+        console.log(error);
+    }else{
+        console.log("Message sent: " + response.message);
+    }
 
 	res.send(200);
+    });
+});
+
+app.post("/start-a-project", function(req, res) {
+    var smtpTransport, mailOptions;
+
+    var messageTitles = [
+        "<br><br><strong>Name: </strong>",
+        "<br><strong>Email: </strong>",
+        "<br><strong>Phone: </strong>",
+        "<br><strong>Company: </strong>",
+        "<br><strong>Website: </strong>",
+        "<br><strong>Budget: </strong>",
+        "<br><strong>Service: </strong>",
+        "<br><br><strong>Extra info: </strong>"
+    ];
+
+    console.log(req.body.brand);
+
+    if (req.body.brand) {
+        var brand = "Brand ";
+    } else {
+        var brand = "";
+    }
+
+    smtpTransport = nodemailer.createTransport("SMTP",{
+        host : 'smtp.mandrillapp.com',
+        port : 587,
+        auth: {
+            user: 'johnie.hjelm@symbio.com',
+            pass: 'dEPPbyhAdDSK_JHAMvGPzw'
+        }
+    });
+
+    console.log('req.body -> ' + req.body.name + ' <' + req.body.email + '>');
+
+    // setup e-mail data with unicode symbols
+    mailOptions = {
+        from: req.body.name + ' <' + req.body.email + '>', // sender address
+        to: 'johniehjelm@me.com',
+        subject: "Symbio Sweden - Start a project", // Subject line
+        html:   req.body.message     + 
+                messageTitles[0]     + 
+                req.body.name        + 
+                messageTitles[1]     + 
+                req.body.email       + 
+                messageTitles[2]     + 
+                req.body.phone       + 
+                messageTitles[3]     + 
+                req.body.company     + 
+                messageTitles[4]     +
+                req.body.siteurl     +
+                messageTitles[5]     + 
+                req.body.budget      + 
+                messageTitles[6]     + 
+                brand       + 
+                req.body.developement + 
+                req.body.design      + 
+                req.body.testing     + 
+                messageTitles[7]     + 
+                req.body.other
+    }
+
+        // send mail with defined transport object
+    smtpTransport.sendMail(mailOptions, function(error, response){
+
+    if(error){
+        console.log(error);
+    }else{
+        console.log("Message sent: " + response.message);
+    }
+
+    res.send(200);
     });
 });
 

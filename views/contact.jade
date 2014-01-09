@@ -7,54 +7,55 @@ section(class="contact-section" id="contact")
             div.mbh.cf
                 div.start-a-project
                     div.grid
-                        div.grid__item.one-whole
-                            h4.form__title.
-                                Your details
-                        div.grid__item.one-half.cf
-                            input(type="text" class="input__text  required  full" placeholder="Enter your name")
-                        div.grid__item.one-half.cf
-                            input(type="tel" class="input__text  required  full" placeholder="Enter a contact telephone number")
-                        div.grid__item.one-half.cf
-                            input(type="email" class="input__text  required  full" placeholder="Enter your email address")
-                        div.grid__item.one-half.cf
-                            input(type="text" class="input__text  required  full" placeholder="Enter your company")
-                        div.grid__item.one-whole.ptl
-                            h4.form__title.
-                                The project
-                        div.grid__item.one-half
-                            input(type="text" class="input__text  full" placeholder="www.")
-                            div.cf.pos-relative
-                                select
-                                    option(value="Please select a budget" selected) Please select a budget
-                                    option(value="$1000-$2000") $1000-$2000
-                                    option(value="$2000-$3000") $2000-$3000
-                                    option(value="$3000-$4000+") $3000-$4000+
-                                small.form__more-info.
-                                    We won't hold you to it, just a ballpark figure will do.
-                        div.grid__item.one-half
-                            textarea(placeholder="Describe the project" class="input__textarea  required  full" cols="40" rows="8")
-                        div.grid__item.one-whole.ptl.cf
-                            h4.form__title.
-                                What do you need us to do?
-                        div.grid__item.one-half.cf
-                            label.form-check Brand
-                                input(type="checkbox" class="form-check__checkbox full")
-                        div.grid__item.one-half.cf
-                            label.form-check Mobile / Web developement
-                                input(type="checkbox" class="form-check__checkbox full")
-                        div.grid__item.one-half.cf
-                            label.form-check Mobile / Web design
-                                input(type="checkbox" class="form-check__checkbox full")
-                        div.grid__item.one-half.cf
-                            label.form-check Testing
-                                input(type="checkbox" class="form-check__checkbox full")
-                        div.grid__item.one-whole.cf.ptl
-                            h4.form__title.
-                                Any extra info that you think will helps us
-                        div.grid__item.one-half.cf
-                            textarea(placeholder="Anything to add?" class="input__textarea  full" cols="40" rows="8")
-                        div.grid__item.one-whole.cf.pbl
-                            a(href="#" class="start-project  btn btn--small  btn--orange") Send
+                        form(name="startaproject", id="startaproject", method="post", action="" parsley-validate)
+                            div.grid__item.one-whole
+                                h4.form__title.
+                                    Your details
+                            div.grid__item.one-half.cf
+                                input(type="text" name="name" class="input__text  required  full" placeholder="Enter your name" parsley-required="true" parsley-error-message="Please enter your name" required)
+                            div.grid__item.one-half.cf
+                                input(type="tel" name="phone" class="input__text  required  full" placeholder="Enter a contact telephone number" parsley-required="true" parsley-error-message="Please enter your telephone number" required)
+                            div.grid__item.one-half.cf
+                                input(type="email" name="email" class="input__text  required  full" placeholder="Enter your email address" parsley-required="true" parsley-error-message="Please enter your email address" required)
+                            div.grid__item.one-half.cf
+                                input(type="text" name="company" class="input__text  full" placeholder="Enter your company")
+                            div.grid__item.one-whole.ptl
+                                h4.form__title.
+                                    The project
+                            div.grid__item.one-half
+                                input(type="text" name="siteurl" class="input__text  full" placeholder="www.")
+                                div.cf.pos-relative
+                                    select(name="budget" parsley-required="true" parsley-error-message="Please select a budget" required)
+                                        option(value="Please select a budget" selected) Please select a budget
+                                        option(value="$1000-$2000") $1000-$2000
+                                        option(value="$2000-$3000") $2000-$3000
+                                        option(value="$3000-$4000+") $3000-$4000+
+                                    small.form__more-info.
+                                        We won't hold you to it, just a ballpark figure will do.
+                            div.grid__item.one-half
+                                textarea(name="message" placeholder="Describe the project" class="input__textarea  required  full" cols="40" rows="8" parsley-required="true" parsley-error-message="Please describe the project" required)
+                            div.grid__item.one-whole.ptl.cf
+                                h4.form__title.
+                                    What do you need us to do?
+                            div.grid__item.one-half.cf
+                                label.form-check Brand
+                                    input(name="brand" value="Brand" type="checkbox" class="form-check__checkbox full")
+                            div.grid__item.one-half.cf
+                                label.form-check Mobile / Web developement
+                                    input(name="developement" value="Mobile / Web developement" type="checkbox" class="form-check__checkbox full")
+                            div.grid__item.one-half.cf
+                                label.form-check Mobile / Web design
+                                    input(name="design" value="Mobile / Web design" type="checkbox" class="form-check__checkbox full")
+                            div.grid__item.one-half.cf
+                                label.form-check Testing
+                                    input(name="testing" value="Testing" type="checkbox" class="form-check__checkbox full")
+                            div.grid__item.one-whole.cf.ptl
+                                h4.form__title.
+                                    Any extra info that you think will helps us
+                            div.grid__item.one-half.cf
+                                textarea(name="other" placeholder="Anything to add?" class="input__textarea  full" cols="40" rows="8")
+                            div.grid__item.one-whole.cf.pbl
+                                input(type="submit" name="submit" value="Send" class="start-project  btn btn--small  btn--orange")
 
                 a(href="#" class="start-project  btn btn--small btn--full btn--black" id="startAProject") + Start a project
 
@@ -75,17 +76,13 @@ section(class="contact-section" id="contact")
                             <br />
                             | +46 73-389 68 53
 
-                    div.grid__item.one-half.cf.mbh
-                        form(name="contactform", id="contactform", method="post", action="")
-                            input(type="text" name="name" class="input__text  required  full  js-first-focus" placeholder="Enter your name")
-                            input(type="email" name="email" class="input__text  required  full" placeholder="Enter your email address")
+                    div.grid__item.one-half.cf.mbh.pos-relative
+                        form(name="contactform", id="contactform", method="post", action="" parsley-validate)
+                            input(type="text" name="name" class="input__text  required  full" placeholder="Enter your name" parsley-required="true" parsley-error-message="Please enter your name" required)
+                            input(type="email" name="email" class="input__text  required  full" placeholder="Enter your email address" parsley-type="email" parsley-required="true" parsley-error-message="Please enter your email address" required)
                             textarea(placeholder="Enter you message" name="message" class="input__textarea  full" cols="40" rows="10")
-                            input(type="submit" name="submit" class="btn btn--small btn--full btn--orange") Send
-                            if(typeof msg !== 'undefined')
-                              if(!!err)
-                                div(class='msgbox err') #{msg}
-                              else
-                                div(class='msgbox success') #{msg}
+                            input(type="submit" name="submit" value="Send" class="btn btn--small btn--full btn--orange")
+                        #msgs
 
                     div.grid__item.one-whole.cf
                         div#map.contact-map

@@ -119,8 +119,8 @@ function jumpNext() {
 jumpNext();
 
 function responsiveNav() {
-    $(".menu-btn").on("touchstart click", function(e){
-        e.stopPropagation(); e.preventDefault();
+    $(".menu-btn").on("click", function(e){
+        e.preventDefault();
         $(this).toggleClass("open");
         $(".main-menu").toggleClass('visibility');
     });
@@ -148,6 +148,18 @@ $.fn.serializeObject = function() {
 function contactForm() {
     $("#contactform").submit(function(){
         var payload = $(this).serializeObject();
+
+        var successMsg = [
+                "<div class='message-box message-box--success'>",
+                "<h3 class='message-box__title'><span>Success!</span> We\'ll get back to you as soon as possible.</h3>",
+                "</div>"
+            ].join('\n'),
+            errorMsg = [
+                "<div class='message-box message-box--error'>",
+                "<h3 class='message-box__title'><span>Ooops!</span> Something went wrong. Please try again.</h3>",
+                "</div>"
+            ].join('\n');
+
         $.ajax({
             type: 'POST',
             url: '/contact',
@@ -156,12 +168,14 @@ function contactForm() {
             data: JSON.stringify(payload),
 
             success: function() {
-                alert("Yaay!");
+
+                console.log("Success");
+
             }, error: function(resp) {
-                if (resp.status == 200) {
-                    alert("Yaay!");
+                if (resp.status === 200) {
+                    console.log("It responds!");
                 } else {
-                    alert("You fucked up!");
+                    console.log("Error!");
                 }
             }
         });
@@ -171,6 +185,36 @@ function contactForm() {
 }
 
 contactForm();
+
+function mainForm() {
+    $("#startaproject").submit(function(){
+        var payload = $(this).serializeObject();
+
+        $.ajax({
+            type: 'POST',
+            url: '/start-a-project',
+            contentType: 'application/json',
+            dataType: 'json',
+            data: JSON.stringify(payload),
+
+            success: function() {
+                
+                console.log("Success!");
+
+            }, error: function(resp) {
+                if (resp.status === 200) {
+                    console.log("It responds!");
+                } else {
+                    console.log("Error!");
+                }
+            }
+        });
+        // disable default behaviour
+        return false;
+    });
+}
+
+mainForm();
 
 // Various functions and features
 $(function(){
