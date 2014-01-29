@@ -2405,6 +2405,36 @@ html.flexbox {
   }
 }
 
+/* line 168, sass/sections/_contact.scss */
+.contact-person {
+  display: block;
+  padding-top: 10px;
+}
+/* line 172, sass/sections/_contact.scss */
+.contact-person p {
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* line 178, sass/sections/_contact.scss */
+.contact-person__image {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  margin-right: 20px;
+}
+
+/* line 184, sass/sections/_contact.scss */
+.contact-person__name {
+  font-size: 1.5em;
+  font-weight: normal;
+  padding-top: 20px;
+  display: block;
+}
+
 @-webkit-keyframes show-shell {
   /* line 2, sass/sections/_expertteam.scss */
   from {
@@ -3717,7 +3747,6 @@ html.flexbox {
   text-align: left;
   letter-spacing: 1px;
   padding: 20px 2.5%;
-  margin: 0;
   margin-bottom: 20px;
   font-size: 1em;
   line-height: 1.3em;
@@ -3737,15 +3766,19 @@ html.flexbox {
   transition: border-color 0.25s ease;
   color: #21262c;
 }
-/* line 36, sass/objects/_forms.scss */
+/* line 35, sass/objects/_forms.scss */
 .input__text.full, .input__textarea.full {
   width: 100%;
 }
-/* line 40, sass/objects/_forms.scss */
+/* line 39, sass/objects/_forms.scss */
+.input__text.halfish, .input__textarea.halfish {
+  width: 49%;
+}
+/* line 43, sass/objects/_forms.scss */
 .input__text.required, .input__textarea.required {
   background: transparent url("images/asterisk.png") 97.5% center no-repeat;
 }
-/* line 44, sass/objects/_forms.scss */
+/* line 47, sass/objects/_forms.scss */
 .input__text.parsley-error, .input__textarea.parsley-error {
   border-color: #C02932 !important;
   -webkit-box-shadow: 0 0 5px rgba(192, 41, 50, 0.5);
@@ -3754,15 +3787,15 @@ html.flexbox {
   -o-box-shadow: 0 0 5px rgba(192, 41, 50, 0.5);
   box-shadow: 0 0 5px rgba(192, 41, 50, 0.5);
 }
-/* line 49, sass/objects/_forms.scss */
+/* line 52, sass/objects/_forms.scss */
 .input__text.parsley-success, .input__textarea.parsley-success {
   border-color: #30AD63 !important;
 }
-/* line 53, sass/objects/_forms.scss */
+/* line 56, sass/objects/_forms.scss */
 .input__text:hover, .input__textarea:hover {
   border-color: #777;
 }
-/* line 57, sass/objects/_forms.scss */
+/* line 60, sass/objects/_forms.scss */
 .input__text:focus, .input__textarea:focus {
   border-color: #fe8500;
   outline: none;
@@ -3775,7 +3808,7 @@ html.flexbox {
   }
 }
 
-/* line 68, sass/objects/_forms.scss */
+/* line 71, sass/objects/_forms.scss */
 .input__textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -3783,12 +3816,12 @@ html.flexbox {
   -o-appearance: none;
   appearance: none;
 }
-/* line 71, sass/objects/_forms.scss */
+/* line 74, sass/objects/_forms.scss */
 .input__textarea.required {
   background: transparent url("images/asterisk.png") 97.5% 20px no-repeat;
 }
 
-/* line 76, sass/objects/_forms.scss */
+/* line 79, sass/objects/_forms.scss */
 .form-check {
   position: relative;
   text-align: left;
@@ -3816,16 +3849,16 @@ html.flexbox {
   display: block;
   color: #A1A1A1;
 }
-/* line 96, sass/objects/_forms.scss */
+/* line 99, sass/objects/_forms.scss */
 .form-check.full {
   width: 100%;
 }
-/* line 100, sass/objects/_forms.scss */
+/* line 103, sass/objects/_forms.scss */
 .form-check:hover {
   border-color: #777;
 }
 
-/* line 105, sass/objects/_forms.scss */
+/* line 108, sass/objects/_forms.scss */
 .form-check__checkbox {
   position: absolute;
   top: 50%;
@@ -3837,13 +3870,13 @@ html.flexbox {
   transform: translateY(-50%);
 }
 
-/* line 112, sass/objects/_forms.scss */
+/* line 115, sass/objects/_forms.scss */
 .custom-select__hidden {
   position: absolute;
   top: -8000px;
 }
 
-/* line 117, sass/objects/_forms.scss */
+/* line 120, sass/objects/_forms.scss */
 .custom-select {
   text-align: left;
   letter-spacing: 1px;
@@ -3869,20 +3902,20 @@ html.flexbox {
   color: #A1A1A1;
   position: relative;
 }
-/* line 134, sass/objects/_forms.scss */
+/* line 137, sass/objects/_forms.scss */
 .custom-select.full {
   width: 100%;
 }
-/* line 138, sass/objects/_forms.scss */
+/* line 141, sass/objects/_forms.scss */
 .custom-select:hover {
   border-color: #777;
 }
-/* line 142, sass/objects/_forms.scss */
+/* line 145, sass/objects/_forms.scss */
 .custom-select:focus {
   border-color: #fe8500;
   outline: none;
 }
-/* line 147, sass/objects/_forms.scss */
+/* line 150, sass/objects/_forms.scss */
 .custom-select:after {
   position: absolute;
   right: 3%;
@@ -3902,7 +3935,7 @@ html.flexbox {
   transform: rotate(45deg);
 }
 
-/* line 163, sass/objects/_forms.scss */
+/* line 166, sass/objects/_forms.scss */
 .custom-select__list {
   width: 100%;
   padding: 5px 2.5%;
@@ -3948,18 +3981,18 @@ html.flexbox {
   font-family: "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
   font-weight: 300;
 }
-/* line 184, sass/objects/_forms.scss */
+/* line 187, sass/objects/_forms.scss */
 .custom-select__list li {
   display: block;
   width: 100%;
   cursor: pointer;
 }
-/* line 189, sass/objects/_forms.scss */
+/* line 192, sass/objects/_forms.scss */
 .custom-select__list li:hover {
   color: #fe8500;
 }
 
-/* line 195, sass/objects/_forms.scss */
+/* line 198, sass/objects/_forms.scss */
 .custom-select__active {
   opacity: 1;
   -webkit-transform: scale(1) translateY(55px);
@@ -3970,22 +4003,22 @@ html.flexbox {
   pointer-events: auto;
 }
 
-/* line 201, sass/objects/_forms.scss */
+/* line 204, sass/objects/_forms.scss */
 .custom-select__selected {
   font-weight: 600;
 }
-/* line 204, sass/objects/_forms.scss */
+/* line 207, sass/objects/_forms.scss */
 .custom-select__selected:hover {
   color: #21262c !important;
 }
-/* line 208, sass/objects/_forms.scss */
+/* line 211, sass/objects/_forms.scss */
 .custom-select__selected:after {
   display: inline-block;
   content: "✓";
   float: right;
 }
 
-/* line 215, sass/objects/_forms.scss */
+/* line 218, sass/objects/_forms.scss */
 .message-box {
   position: absolute;
   top: 0;
@@ -3995,7 +4028,7 @@ html.flexbox {
   background-color: rgba(255, 255, 255, 0.7);
 }
 
-/* line 224, sass/objects/_forms.scss */
+/* line 227, sass/objects/_forms.scss */
 .message-box__title {
   display: block;
   position: absolute;
@@ -4010,17 +4043,17 @@ html.flexbox {
   transform: translate(-50%, -50%);
   font-weight: normal;
 }
-/* line 234, sass/objects/_forms.scss */
+/* line 237, sass/objects/_forms.scss */
 .message-box__title span {
   display: block;
   font-size: 2em;
   font-weight: bold;
 }
-/* line 239, sass/objects/_forms.scss */
+/* line 242, sass/objects/_forms.scss */
 .message-box--success .message-box__title span {
   color: #30AD63;
 }
-/* line 243, sass/objects/_forms.scss */
+/* line 246, sass/objects/_forms.scss */
 .message-box--error .message-box__title span {
   color: #C02932;
 }
@@ -4031,7 +4064,7 @@ html.flexbox {
 /*
  * Parsley.js validation styles 
  */
-/* line 256, sass/objects/_forms.scss */
+/* line 259, sass/objects/_forms.scss */
 .parsley-error-list {
   font-family: "Open Sans", "Montserrat", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, arial, sans-serif;
   font-size: 12px;

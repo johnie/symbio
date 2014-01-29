@@ -4,61 +4,6 @@ section(class="contact-section" id="contact")
             h3.section-title.with-border Let's work 
                 span together
 
-            div.mbh.cf
-                div.start-a-project
-                    div.grid
-                        form(name="startaproject", id="startaproject", method="post", action="" parsley-validate)
-                            div.grid__item.one-whole
-                                h4.form__title.
-                                    Your details
-                            div.grid__item.one-half.cf
-                                input(type="text" name="name" class="input__text  required  full" placeholder="Enter your name" parsley-required="true" parsley-error-message="Please enter your name" required)
-                            div.grid__item.one-half.cf
-                                input(type="tel" name="phone" class="input__text  required  full" placeholder="Enter a contact telephone number" parsley-required="true" parsley-error-message="Please enter your telephone number" required)
-                            div.grid__item.one-half.cf
-                                input(type="email" name="email" class="input__text  required  full" placeholder="Enter your email address" parsley-required="true" parsley-error-message="Please enter your email address" required)
-                            div.grid__item.one-half.cf
-                                input(type="text" name="company" class="input__text  full" placeholder="Enter your company")
-                            div.grid__item.one-whole.ptl
-                                h4.form__title.
-                                    The project
-                            div.grid__item.one-half
-                                input(type="text" name="siteurl" class="input__text  full" placeholder="www.")
-                                div.cf.pos-relative
-                                    select(name="budget" parsley-required="true" parsley-error-message="Please select a budget" required)
-                                        option(value="Please select a budget" selected) Please select a budget
-                                        option(value="$1000-$2000") $1000-$2000
-                                        option(value="$2000-$3000") $2000-$3000
-                                        option(value="$3000-$4000+") $3000-$4000+
-                                    small.form__more-info.
-                                        We won't hold you to it, just a ballpark figure will do.
-                            div.grid__item.one-half
-                                textarea(name="message" placeholder="Describe the project" class="input__textarea  required  full" cols="40" rows="8" parsley-required="true" parsley-error-message="Please describe the project" required)
-                            div.grid__item.one-whole.ptl.cf
-                                h4.form__title.
-                                    What do you need us to do?
-                            div.grid__item.one-half.cf
-                                label.form-check Brand
-                                    input(name="brand" value="Brand" type="checkbox" class="form-check__checkbox full")
-                            div.grid__item.one-half.cf
-                                label.form-check Mobile / Web developement
-                                    input(name="developement" value="Mobile / Web developement" type="checkbox" class="form-check__checkbox full")
-                            div.grid__item.one-half.cf
-                                label.form-check Mobile / Web design
-                                    input(name="design" value="Mobile / Web design" type="checkbox" class="form-check__checkbox full")
-                            div.grid__item.one-half.cf
-                                label.form-check Testing
-                                    input(name="testing" value="Testing" type="checkbox" class="form-check__checkbox full")
-                            div.grid__item.one-whole.cf.ptl
-                                h4.form__title.
-                                    Any extra info that you think will helps us
-                            div.grid__item.one-half.cf
-                                textarea(name="other" placeholder="Anything to add?" class="input__textarea  full" cols="40" rows="8")
-                            div.grid__item.one-whole.cf.pbl
-                                input(type="submit" name="submit" value="Send" class="start-project  btn btn--small  btn--orange")
-
-                a(href="#" class="start-project  btn btn--small btn--full btn--black" id="startAProject") + Start a project
-
             div.contact-form
                 div.grid
                     div.grid__item.one-half.cf.mbh
@@ -66,20 +11,25 @@ section(class="contact-section" id="contact")
                             We have a passion for open conversation and dialogue. Let's chat.
 
                         p.
-                            We love to hear from new people, even if all your asking for is a little advice on how to move your business forward. If however, your looking to get a quote on your next project, head over to the <strong>Start a project</strong> section above.
+                            We love to hear from new people, even if all your asking for is a little advice on how to move your business forward. If however, your looking to get a quote on your next project, head over to the <strong>contact form</strong> next.
 
                         p.
                             We're down to earth, approachable people so no matter what's on your mind just drop us a line, we'd love to hear from you.
 
-                        p
-                            a(href="mailto:anders.carlsarv@symbio.com") anders.carlsarv@symbio.com
-                            <br />
-                            | +46 73-389 68 53
+                        div.contact-person
+                            img(src="/images/anders.png" width="120" height="120" class="contact-person__image")
+                            strong.contact-person__name.
+                                Anders Carlsarv
+                            p
+                                a(href="mailto:anders.carlsarv@symbio.com") anders.carlsarv@symbio.com
+                            p.
+                                +46 73-389 68 53
 
                     div.grid__item.one-half.cf.mbh.pos-relative
                         form(name="contactform", id="contactform", method="post", action="" parsley-validate)
                             input(type="text" name="name" class="input__text  required  full" placeholder="Enter your name" parsley-required="true" parsley-error-message="Please enter your name" required)
                             input(type="email" name="email" class="input__text  required  full" placeholder="Enter your email address" parsley-type="email" parsley-required="true" parsley-error-message="Please enter your email address" required)
+                            input(type="tel" name="phone" class="input__text full" placeholder="Enter your phone number")
                             textarea(placeholder="Enter you message" name="message" class="input__textarea  full" cols="40" rows="10")
                             input(type="submit" name="submit" value="Send" class="btn btn--small btn--full btn--orange")
                         #msgs

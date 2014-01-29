@@ -164,3 +164,26 @@
     @include vendor(transform, translateY(0) rotate(-45deg));
   }
 }
+
+.contact-person{
+  display: block;
+  padding-top: 10px;
+
+  p{
+    margin-bottom: 0;
+    line-height: 1.5;
+  }
+}
+
+.contact-person__image{
+  @include vendor(border-radius, 50%);
+  float: left;
+  margin-right: 20px;
+}
+
+.contact-person__name{
+  font-size: 1.5em;
+  font-weight: normal;
+  padding-top: 20px;
+  display: block;
+}

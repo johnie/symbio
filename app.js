@@ -1,12 +1,13 @@
-var express = require('express'),
-    http = require('http'),
-    path = require('path'),
-    nodemailer = require('nodemailer');
+var express     = require('express'),
+    config      = require('./config.js'),
+    http        = require('http'),
+    path        = require('path'),
+    nodemailer  = require('nodemailer');
 
 var app = express();
 
 app.configure(function(){
-    app.set('port', process.env.PORT || 1337);
+    app.set('port', process.env.PORT || config.http.port);
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'jade');
 
@@ -30,11 +31,11 @@ app.post("/contact", function(req, res) {
     var smtpTransport, mailOptions;
 
     smtpTransport = nodemailer.createTransport("SMTP",{
-        host : 'smtp.mandrillapp.com',
+        host : config.email.host,
         port : 587,
         auth: {
-            user: 'johnie.hjelm@symbio.com',
-            pass: 'dEPPbyhAdDSK_JHAMvGPzw'
+            user: config.email.user,
+            pass: config.email.pass
         }
     });
 
@@ -43,9 +44,9 @@ app.post("/contact", function(req, res) {
     // setup e-mail data with unicode symbols
     mailOptions = {
         from: req.body.name + ' <' + req.body.email + '>', // sender address
-        to: 'johniehjelm@me.com',
+        to: config.email.johnie,
         subject: "Symbio Sweden - Contact", // Subject line
-        html: req.body.message + "<br /><br /><b>Name:</b><br />" + req.body.name + "<br /><b>Email:</b><br />" + req.body.email
+        html: req.body.message + "<br /><br /><b>Name:</b><br />" + req.body.name + "<br /><b>Phone:</b>" + req.body.phone + "<br /><b>Email:</b><br />" + req.body.email
     }
 
         // send mail with defined transport object
@@ -58,79 +59,6 @@ app.post("/contact", function(req, res) {
     }
 
 	res.send(200);
-    });
-});
-
-app.post("/start-a-project", function(req, res) {
-    var smtpTransport, mailOptions;
-
-    var messageTitles = [
-        "<br><br><strong>Name: </strong>",
-        "<br><strong>Email: </strong>",
-        "<br><strong>Phone: </strong>",
-        "<br><strong>Company: </strong>",
-        "<br><strong>Website: </strong>",
-        "<br><strong>Budget: </strong>",
-        "<br><strong>Service: </strong>",
-        "<br><br><strong>Extra info: </strong>"
-    ];
-
-    console.log(req.body.brand);
-
-    if (req.body.brand) {
-        var brand = "Brand ";
-    } else {
-        var brand = "";
-    }
-
-    smtpTransport = nodemailer.createTransport("SMTP",{
-        host : 'smtp.mandrillapp.com',
-        port : 587,
-        auth: {
-            user: 'johnie.hjelm@symbio.com',
-            pass: 'dEPPbyhAdDSK_JHAMvGPzw'
-        }
-    });
-
-    console.log('req.body -> ' + req.body.name + ' <' + req.body.email + '>');
-
-    // setup e-mail data with unicode symbols
-    mailOptions = {
-        from: req.body.name + ' <' + req.body.email + '>', // sender address
-        to: 'johniehjelm@me.com',
-        subject: "Symbio Sweden - Start a project", // Subject line
-        html:   req.body.message     + 
-                messageTitles[0]     + 
-                req.body.name        + 
-                messageTitles[1]     + 
-                req.body.email       + 
-                messageTitles[2]     + 
-                req.body.phone       + 
-                messageTitles[3]     + 
-                req.body.company     + 
-                messageTitles[4]     +
-                req.body.siteurl     +
-                messageTitles[5]     + 
-                req.body.budget      + 
-                messageTitles[6]     + 
-                brand       + 
-                req.body.developement + 
-                req.body.design      + 
-                req.body.testing     + 
-                messageTitles[7]     + 
-                req.body.other
-    }
-
-        // send mail with defined transport object
-    smtpTransport.sendMail(mailOptions, function(error, response){
-
-    if(error){
-        console.log(error);
-    }else{
-        console.log("Message sent: " + response.message);
-    }
-
-    res.send(200);
     });
 });
 

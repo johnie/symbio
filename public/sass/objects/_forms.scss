@@ -21,7 +21,6 @@
     text-align: left;
     letter-spacing: 1px;
     padding: 20px 2.5%;
-    margin: 0;
     margin-bottom: 20px;
     font-size: 1em;
     line-height: 1.3em;
@@ -35,6 +34,10 @@
 
     &.full{
         width: 100%;
+    }
+
+    &.halfish{
+        width: 49%;
     }
 
     &.required{

@@ -186,36 +186,6 @@ function contactForm() {
 
 contactForm();
 
-function mainForm() {
-    $("#startaproject").submit(function(){
-        var payload = $(this).serializeObject();
-
-        $.ajax({
-            type: 'POST',
-            url: '/start-a-project',
-            contentType: 'application/json',
-            dataType: 'json',
-            data: JSON.stringify(payload),
-
-            success: function() {
-                
-                console.log("Success!");
-
-            }, error: function(resp) {
-                if (resp.status === 200) {
-                    console.log("It responds!");
-                } else {
-                    console.log("Error!");
-                }
-            }
-        });
-        // disable default behaviour
-        return false;
-    });
-}
-
-mainForm();
-
 // Various functions and features
 $(function(){
     if (Modernizr.touch) {
