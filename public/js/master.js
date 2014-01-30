@@ -95,14 +95,6 @@ function startAProject() {
         }
     
     });
-
-    new CustomSelect("select", {
-        hiddenSelectClass : "custom-select__hidden",
-        customSelectClass : "custom-select full",
-        listSelectClass : "custom-select__list",
-        activeListClass : "custom-select__active",
-        selectedOptionClass : "custom-select__selected"
-    });
 }
 
 startAProject();
@@ -185,6 +177,21 @@ function contactForm() {
 }
 
 contactForm();
+
+function submitForm() {
+
+  $("#submit").prop('disabled', true);
+
+  $("#contactform").change(function(){
+    if ($("#name").val() === '' || $("#email").val() === '') {
+      $("#submit").prop('disabled', true);
+    } else {
+      $("#submit").prop('disabled', false);
+    }
+  });
+}
+
+submitForm();
 
 // Various functions and features
 $(function(){

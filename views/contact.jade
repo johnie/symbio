@@ -27,11 +27,11 @@ section(class="contact-section" id="contact")
 
                     div.grid__item.one-half.cf.mbh.pos-relative
                         form(name="contactform", id="contactform", method="post", action="" parsley-validate)
-                            input(type="text" name="name" class="input__text  required  full" placeholder="Enter your name" parsley-required="true" parsley-error-message="Please enter your name" required)
-                            input(type="email" name="email" class="input__text  required  full" placeholder="Enter your email address" parsley-type="email" parsley-required="true" parsley-error-message="Please enter your email address" required)
+                            input(type="text" name="name" id="name" class="input__text  required  full" placeholder="Enter your name" parsley-required="true" parsley-error-message="Please enter your name" required)
+                            input(type="email" name="email" id="email" class="input__text  required  full" placeholder="Enter your email address" parsley-type="email" parsley-required="true" parsley-error-message="Please enter your email address" required)
                             input(type="tel" name="phone" class="input__text full" placeholder="Enter your phone number")
                             textarea(placeholder="Enter you message" name="message" class="input__textarea  full" cols="40" rows="10")
-                            input(type="submit" name="submit" value="Send" class="btn btn--small btn--full btn--orange")
+                            input(type="submit" name="submit" value="Send" id="submit" class="btn btn--small btn--full btn--orange")
                         #msgs
 
                     div.grid__item.one-whole.cf

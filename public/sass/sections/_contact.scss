@@ -187,3 +187,8 @@
   padding-top: 20px;
   display: block;
 }
+
+#submit:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

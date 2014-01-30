@@ -2435,6 +2435,12 @@ html.flexbox {
   display: block;
 }
 
+/* line 191, sass/sections/_contact.scss */
+#submit:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 @-webkit-keyframes show-shell {
   /* line 2, sass/sections/_expertteam.scss */
   from {
