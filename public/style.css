@@ -713,7 +713,7 @@ fieldset {
  * and over in your markup.
  */
 /* line 104, sass/generic/_resets.scss */
-.cf:after, .section-subtitle:after, .nav:after, .grid:after, .main-section:after, .header:after, .form-check:after, .navigation:after, .main-menu:after {
+.cf:after, .section-subtitle:after, .nav:after, .grid:after, .main-section:after, .header:after, .contact-person:after, .form-check:after, .navigation:after, .main-menu:after {
   content: "";
   display: table;
   clear: both;
@@ -2410,13 +2410,19 @@ html.flexbox {
   display: block;
   padding-top: 10px;
 }
-/* line 172, sass/sections/_contact.scss */
+/* line 173, sass/sections/_contact.scss */
 .contact-person p {
   margin-bottom: 0;
   line-height: 1.5;
 }
+@media (max-width: 600px) {
+  /* line 168, sass/sections/_contact.scss */
+  .contact-person {
+    text-align: center;
+  }
+}
 
-/* line 178, sass/sections/_contact.scss */
+/* line 183, sass/sections/_contact.scss */
 .contact-person__image {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
@@ -2426,16 +2432,39 @@ html.flexbox {
   float: left;
   margin-right: 20px;
 }
+@media (max-width: 600px) {
+  /* line 183, sass/sections/_contact.scss */
+  .contact-person__image {
+    width: 120px;
+    height: auto;
+    margin-right: 0;
+    margin: 0 auto;
+    display: block;
+    float: none;
+  }
+  /* line 196, sass/sections/_contact.scss */
+  .contact-person__image:after {
+    content: ' ';
+    display: table;
+    clear: both;
+  }
+}
 
-/* line 184, sass/sections/_contact.scss */
+/* line 204, sass/sections/_contact.scss */
 .contact-person__name {
   font-size: 1.5em;
   font-weight: normal;
   padding-top: 20px;
   display: block;
 }
+@media (max-width: 600px) {
+  /* line 204, sass/sections/_contact.scss */
+  .contact-person__name {
+    font-size: 1.2em;
+  }
+}
 
-/* line 191, sass/sections/_contact.scss */
+/* line 215, sass/sections/_contact.scss */
 #submit:disabled {
   opacity: 0.5;
   pointer-events: none;

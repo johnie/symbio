@@ -168,10 +168,15 @@
 .contact-person{
   display: block;
   padding-top: 10px;
+  @extend .cf;
 
   p{
     margin-bottom: 0;
     line-height: 1.5;
+  }
+
+  @media (max-width: $phone-size) {
+    text-align: center;
   }
 }
 
@@ -179,6 +184,21 @@
   @include vendor(border-radius, 50%);
   float: left;
   margin-right: 20px;
+
+  @media (max-width: $phone-size) {
+    width: 120px;
+    height: auto;
+    margin-right: 0;
+    margin: 0 auto;
+    display: block;
+    float: none;
+
+    &:after{
+      content: ' ';
+      display: table;
+      clear: both;
+    }
+  }
 }
 
 .contact-person__name{
@@ -186,6 +206,10 @@
   font-weight: normal;
   padding-top: 20px;
   display: block;
+
+  @media (max-width: $phone-size) {
+    font-size: 1.2em;
+  }
 }
 
 #submit:disabled {

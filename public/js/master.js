@@ -1,9 +1,7 @@
 function sections() {
-    if (!Modernizr.touch) {
-        $(".sections").css({
-            "height" : $(window).height() + "px"
-        });
-    }
+    $(".sections").css({
+        "height" : $(window).height() + "px"
+    });
 }
 
 sections();
@@ -111,10 +109,18 @@ function jumpNext() {
 jumpNext();
 
 function responsiveNav() {
-    $(".menu-btn").on("click", function(e){
+    $(".menu-btn").click(function(e){
         e.preventDefault();
         $(this).toggleClass("open");
         $(".main-menu").toggleClass('visibility');
+        
+        if ($(this).hasClass("open")){
+            $(".main-menu a").click(function(e){
+                e.preventDefault();
+                $(".menu-btn").removeClass("open");
+                $(".main-menu").removeClass("visibility");
+            });
+        }  
     });
 }
 
@@ -199,3 +205,5 @@ $(function(){
         $(".main-section").addClass("js-bg-scroll");
     }
 });
+
+console.log(navigator.userAgent);

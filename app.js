@@ -44,7 +44,7 @@ app.post("/contact", function(req, res) {
     // setup e-mail data with unicode symbols
     mailOptions = {
         from: req.body.name + ' <' + req.body.email + '>', // sender address
-        to: config.email.johnie,
+        to: config.email.to,
         subject: "Symbio Sweden - Contact", // Subject line
         html: req.body.message + "<br /><br /><b>Name:</b><br />" + req.body.name + "<br /><b>Phone:</b>" + req.body.phone + "<br /><b>Email:</b><br />" + req.body.email
     }
